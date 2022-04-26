@@ -1,5 +1,5 @@
 // connection links
 module.exports = {
-    Product: require('./Movie'),
+    Movie: require('./Movie'),
     Review: require('./Review'),
 } 

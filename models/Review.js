@@ -1,7 +1,6 @@
 // Import Mongoose Dependency
 const mongoose = require('mongoose')
 
-
 // Review Schema
 const reviewSchema = new mongoose.Schema({
     rating: {

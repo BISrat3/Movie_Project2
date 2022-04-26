@@ -1,7 +1,6 @@
 // Import Mongoose Dependency
 const mongoose = require('mongoose')
 
-
 // Movie Schema
 const movieSchema = new mongoose.Schema({
     title: {

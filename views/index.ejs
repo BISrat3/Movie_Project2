@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Page</title>
+    <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
     <nav>
@@ -18,7 +19,7 @@
             <div>
                 <h2><a href="/movies/<%=movie._id%>"><%=movie.title%></a></h2>
                 <p><%=movie.releaseDate%></p>
-                <img src="<%=movie.image%>" alt="<%=movie.title%>">
+                <img class="index-pic" src="<%=movie.image%>" alt="<%=movie.title%>">
             </div>
         <% } %>
     </div>

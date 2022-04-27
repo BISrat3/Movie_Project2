@@ -18,12 +18,12 @@
         <div>
             <h3>Rating: <%=reviews[i].rating%></h3>
             <p><%=reviews[i].comment%></p>
-            <a href="/reviews/<%=reviews[i]._id%>/edit"><button>Edit Review</button> </a> <br />
+            <a href="/reviews/<%=reviews[i]._id%>/edit"><button class="editBtn">Edit Review</button> </a> <br />
         </div>
         <div>
             <form method="POST" action="/reviews/<%= reviews[i]._id %>?_method=DELETE">
                 <br />
-                <input type="submit" value="Delete Review">
+                <input type="submit" value="Delete Review" class="deleteBtn">
             </form>
         </div>
         <% } %>

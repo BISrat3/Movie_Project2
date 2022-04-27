@@ -23,8 +23,11 @@ app.use(express.static('public'))
 // body-parser middleware
 app.use(express.urlencoded({ extended: false }))
 
+// Movies Router
 app.use('/movies', controllers.movies)
 
+// Reviews Router
+app.use('/reviews', controllers.reviews)
 
 // "Home" route
 app.get('/', (req,res) =>

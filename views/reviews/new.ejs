@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('../partials/head.ejs') %>
+
+    <body>
+        <%- include('../partials/nav.ejs') %>
+        <h1>New Review</h1>
+        <form method="POST" action="/reviews">
+            <div>
+                <label for="rating"> Review Rating: </label>
+                <input id="rating" name="rating" type="number" />
+            </div>
+            <div>
+                <label for="comment"> Review Comment: </label>
+                <input id="comment" name="comment" type="string" />
+            </div>
+            <div>
+                <label for=""> Related Movie: </label>
+                <select name="movie" id="">
+                    <% for(let i=0; i<movies.length; i++) { %>
+                        <option value="<%=movies[i]._id%>"><%=movies[i].title%></option>
+                    <% } %>
+                </select>
+            </div>
+            <input type="submit" value="Create new review">
+        </form>
+
+    </body>
+
+</html>

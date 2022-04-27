@@ -65,5 +65,31 @@ router.get ('/:reviewId', async (req, res, next) => {
     }
 })
 
+// Edit Get Route - Serving a edit.ejs template
+router.get ('/:reviewId/edit', async (req, res, next) => {
+    try {
+        const foundReview = await db.Review.findById(req.params.reviewId)
+        const context = { review: foundReview }
+        res.render('reviews/edit.ejs', context)
+    } catch (error) {
+        console.log(error);
+        req.error = error;
+        return next();
+    }
+})
+
+// Update Put Route 
+router.put ('/:reviewId', async (req, res, next) => {
+    // res.send('Hitting Review Update ' + req.params.reviewId)
+    try {
+        const updatedReview = await db.Review.findByIdAndUpdate(req.params.reviewId, req.body);
+        console.log(updatedReview);
+        return res.redirect('/movies/');
+    } catch (error) {
+        console.log(error);
+        req.error = error;
+        return next();
+    }
+})
 
 module.exports = router

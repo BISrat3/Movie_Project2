@@ -18,6 +18,7 @@
         <div>
             <h3>Rating: <%=reviews[i].rating%></h3>
             <p><%=reviews[i].comment%></p>
+            <a href="/reviews/<%=reviews[i]._id%>/edit">Edit Review</a>
         </div>
     <% } %>
 </body>

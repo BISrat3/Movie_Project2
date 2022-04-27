@@ -1,6 +1,7 @@
 // import express
 const express = require('express')
 const methodOverride = require('method-override')
+const { reviews } = require('.')
 
 
 const router = express.Router()
@@ -29,9 +30,11 @@ router.get('/new', (req,res) => {
 router.get('/:id', async (req, res, next) => {
     try {
         const foundMovie = await db.Movie.findById(req.params.id)
-        // Need line to find all Reviews here
+        const reviews = await db.Review.find({product: req.params.id})
+        console.log(reviews.length, 'Reviews Found');
         const context = {
             movie: foundMovie,
+            reviews: reviews,
         }
         res.render('show.ejs', context)
     } catch (error) {

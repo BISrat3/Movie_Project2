@@ -20,6 +20,9 @@ app.set('view engine', 'ejs')
 // Middleware to access public directory
 app.use(express.static('public'))
 
+// convert a get/post request to a delete (or put) request
+app.use(methodOverride('_method'))
+
 // body-parser middleware
 app.use(express.urlencoded({ extended: false }))
 

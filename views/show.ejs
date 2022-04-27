@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
 
     <%- include('partials/head.ejs') %>
 
@@ -14,7 +13,7 @@
     <p><%=movie.releaseDate%></p>
     <img class="show pic" src="<%=movie.image%>" alt="<%=movie.title%>">
     <div>
-        <a href="/movies/<%=movie._id%>/edit">Edit <%= movie.name %></a>
+        <a href="/movies/<%=movie._id%>/edit">Edit <%= movie.title %></a>
     </div>
 
     <% for(let i=0; i<reviews.length; i++) { %>

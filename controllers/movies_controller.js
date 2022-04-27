@@ -1,7 +1,6 @@
 // import express
 const express = require('express')
 const methodOverride = require('method-override')
-const { reviews } = require('.')
 
 
 const router = express.Router()
@@ -70,5 +69,16 @@ router.get('/:id/edit', async (req, res, next) => {
     }
 })
 
+// Update route - put - movies
+router.put('/:id', async (req, res, next) => {
+    try {
+        const updatedMovie = await db.Movie.findByIdAndUpdate(req.params.id, req.body);
+        return res.redirect('/movies');
+    } catch (error) {
+        console.log(error);
+        req.error = error;
+        return next();
+    }
+});
 
 module.exports = router 

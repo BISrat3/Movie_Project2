@@ -10,10 +10,15 @@
     <div>
         <a href="/movies/<%=movie._id%>/edit">Edit <%= movie.title %></a>
     </div>
+    <div>
+        <a href="/reviews/new">Add Review</a>
+    </div>
+
     <% for(let i=0; i<reviews.length; i++) { %>
         <div>
             <h3>Rating: <%=reviews[i].rating%></h3>
             <p><%=reviews[i].comment%></p>
+            <a href="/reviews/<%=reviews[i]._id%>/edit">Edit Review</a>
         </div>
     <% } %>
 </body>

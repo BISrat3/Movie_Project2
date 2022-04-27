@@ -15,6 +15,7 @@
                 <label for="comment"> Review Comment: </label>
                 <input id="comment" name="comment" type="string" value="<%=review.comment%>"/>
             </div>
+            <input type="hidden" name="movieId" value="<%=review.movie._id%>" id="">
             <input type="submit" value="Edit review">
         </form>
 

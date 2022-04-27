@@ -6,9 +6,9 @@
 <body>
     <%- include('../partials/nav.ejs')%>
     <h1>Review Show Page</h1>
-    <p>Movie: <%=review.product.name%></p>
+    <p>Movie: <%=review.movie.title%></p>
     <p>Rating: <%=review.rating%></p>
-    <p>Review: <%=review.content%></p>
-    <a href="/products/<%=review.movie._id%>">Find more information about <%=review.movie.title%></a>
+    <p>Review: <%=review.comment%></p>
+    <a href="/movies/<%=review.movie._id%>">Find more information about <%=review.movie.title%></a>
 </body>
 </html>

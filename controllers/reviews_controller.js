@@ -49,6 +49,21 @@ router.post ('/', async (req, res, next) => {
     }
 })
 
+// Show Route - Serving a show.ejs template
+router.get ('/:reviewId', async (req, res, next) => {
+    // res.send('Hitting Review Show ' + req.params.reviewId)
+    // res.render('reviews/show.ejs')
+    try {
+        const foundReview = await db.Review.findById(req.params.reviewId)
+        .populate('movie')
+        const context = { review: foundReview }
+        res.render('reviews/show.ejs', context)
+    } catch (error) {
+        console.log(error);
+        req.error = error;
+        return next();
+    }
+})
 
 
 module.exports = router

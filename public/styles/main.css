@@ -7,3 +7,8 @@ body {
     height: 500px;
     object-fit: contain;
 }
+
+.btn{
+    background-color: green;
+
+}

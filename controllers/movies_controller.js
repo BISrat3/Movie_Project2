@@ -57,4 +57,18 @@ router.post('/', async (req, res, next) => {
     }
 })
 
-module.exports = router
+// "Edit" route
+router.get('/:id/edit', async (req, res, next) => {
+    try {
+        const updateMovie = await db.Movie.findById(req.params.id)
+        console.log(updateMovie)
+        return res.render('edit.ejs', {movie: updateMovie})
+    } catch (error){
+        console.log(error)
+        req.error =error
+        return next()
+    }
+})
+
+
+module.exports = router 

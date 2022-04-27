@@ -78,6 +78,18 @@ router.get ('/:reviewId/edit', async (req, res, next) => {
     }
 })
 
+// Delete Route
+router.delete('/:reviewId', async (req, res, next) =>{
+    try {
+        const deleteMovie = await db.Review.findByIdAndDelete(req.params.reviewId)
+        res.redirect('/movies/')
+    } catch (error) {
+        req.error = error
+        return next()
+    }
+
+})
+
 // Update Put Route 
 router.put ('/:reviewId', async (req, res, next) => {
     // res.send('Hitting Review Update ' + req.params.reviewId)
@@ -92,5 +104,6 @@ router.put ('/:reviewId', async (req, res, next) => {
         return next();
     }
 })
+
 
 module.exports = router

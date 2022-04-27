@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
     <%- include('../partials/head.ejs') %>
-
 <body>
     <%- include('../partials/nav.ejs')%>
     <h1>Review Show Page</h1>
     <p>Movie: <%=review.movie.title%></p>
     <p>Rating: <%=review.rating%></p>
+<<<<<<< HEAD
     <p>Review: <%=review.comment%></p>
+=======
+    <p>Review: <%=review.content%></p>
+>>>>>>> 858214f9d1bf4af0c7945257cf68d09ac5099542
     <a href="/movies/<%=review.movie._id%>">Find more information about <%=review.movie.title%></a>
 </body>
 </html>

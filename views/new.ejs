@@ -1,12 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
     <%- include('partials/head.ejs') %>
-
 <body>
-
-    <%- include('partials/nav.ejs') %>
-    
+    <%- include('partials/nav.ejs') %>  
     <h1>New Movie Page</h1>
     <form method="POST" action="/movies">
         <div>
@@ -21,7 +17,6 @@
             <label for="releaseDate">Movie Release Date:</label>
             <input type="text" name="releaseDate" id="">
         </div>
-
         <input type="submit" id="" value="Create New Movie">
     </form>
 </body>

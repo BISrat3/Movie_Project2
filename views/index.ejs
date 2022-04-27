@@ -7,6 +7,20 @@
     <title>Movie Page</title>
 </head>
 <body>
+    <nav>
+        <a href="/movies">Index</a>
+        <a href="/movies/new">New</a>
+    </nav>
     <h1>Movie Home Page </h1>
+    <div>
+        <% for(let i=0; i<movies.length; i++){ %>
+            <% const movie = movies[i] %>
+            <div>
+                <h2><a href="/movies/<%=movie._id%>"><%=movie.title%></a></h2>
+                <p><%=movie.releaseDate%></p>
+                <img src="<%=movie.image%>" alt="<%=movie.title%>">
+            </div>
+        <% } %>
+    </div>
 </body>
 </html>

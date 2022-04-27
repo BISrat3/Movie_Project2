@@ -9,8 +9,17 @@ const router = express.Router()
 const db = require('../models')
 
 // "Index" route
-router.get('/', (req,res) =>{
-    res.render('index.ejs')
+router.get('/', async (req, res, next) =>{
+    try {
+        const movies = await db.Movie.find({})
+        console.log(movies)
+        const context = { movies }
+        res.render('index.ejs', context)
+    } catch (error) {
+        console.log(error)
+        req.error = error
+        return next()
+    }
 })
 
 // "New" route
@@ -20,8 +29,6 @@ router.get('/new', (req,res) => {
 
 // Post "New" route
 router.post('/', async (req, res, next) => {
-    // console.log(req.body)
-    // res.send(req.body)
     try {
         const createMovie = await db.Movie.create(req.body)
         console.log(createMovie)

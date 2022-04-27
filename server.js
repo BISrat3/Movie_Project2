@@ -17,6 +17,9 @@ require('./config/db.connection');
 // app configs 
 app.set('view engine', 'ejs')
 
+// Middleware to access public directory
+app.use(express.static('public'))
+
 // body-parser middleware
 app.use(express.urlencoded({ extended: false }))
 

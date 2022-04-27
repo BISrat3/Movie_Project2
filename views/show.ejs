@@ -20,6 +20,11 @@
             <p><%=reviews[i].comment%></p>
             <a href="/reviews/<%=reviews[i]._id%>/edit">Edit Review</a>
         </div>
+        <div>
+            <form method="POST" action="/reviews/<%= reviews[i]._id %>?_method=DELETE">
+                <input type="submit" value="Delete Review">
+            </form>
+        </div>
     <% } %>
 </body>
 </html>

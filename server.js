@@ -23,6 +23,7 @@ app.use(express.static('public'))
 // body-parser middleware
 app.use(express.urlencoded({ extended: false }))
 
+//Controllers
 app.use('/movies', controllers.movies)
 
 

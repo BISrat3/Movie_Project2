@@ -82,9 +82,10 @@ router.get ('/:reviewId/edit', async (req, res, next) => {
 router.put ('/:reviewId', async (req, res, next) => {
     // res.send('Hitting Review Update ' + req.params.reviewId)
     try {
+        const movieId = req.body.movieId
         const updatedReview = await db.Review.findByIdAndUpdate(req.params.reviewId, req.body);
         console.log(updatedReview);
-        return res.redirect('/movies/');
+        return res.redirect(`/movies/${movieId}`);
     } catch (error) {
         console.log(error);
         req.error = error;

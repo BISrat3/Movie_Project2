@@ -13,16 +13,16 @@
     <div>
         <a href="/reviews/new">Add Review</a>
     </div>
-
     <% for(let i=0; i<reviews.length; i++) { %>
         <% if( reviews[i].movie._id.equals(movie._id) ){ %>
         <div>
             <h3>Rating: <%=reviews[i].rating%></h3>
             <p><%=reviews[i].comment%></p>
-            <a href="/reviews/<%=reviews[i]._id%>/edit">Edit Review</a>
+            <a href="/reviews/<%=reviews[i]._id%>/edit"><button>Edit Review</button> </a> <br />
         </div>
         <div>
             <form method="POST" action="/reviews/<%= reviews[i]._id %>?_method=DELETE">
+                <br />
                 <input type="submit" value="Delete Review">
             </form>
         </div>

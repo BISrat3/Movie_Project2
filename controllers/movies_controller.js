@@ -69,6 +69,18 @@ router.get('/:id/edit', async (req, res, next) => {
     }
 })
 
+// Delete Route
+router.delete('/:id', async (req, res, next) =>{
+    try {
+        const deleteMovie = await db.Movie.findByIdAndDelete(req.params.id)
+        res.redirect('/movies')
+    } catch (error) {
+        req.error = error
+        return next()
+    }
+
+})
+
 // Update route - put - movies
 router.put('/:id', async (req, res, next) => {
     try {

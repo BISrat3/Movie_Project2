@@ -1,17 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie Page</title>
-    <link rel="stylesheet" href="styles/main.css">
-</head>
+
+    <%- include('partials/head.ejs') %>
+
 <body>
-    <nav>
-        <a href="/movies">Index</a>
-        <a href="/movies/new">New</a>
-    </nav>
+
+    <%- include('partials/nav.ejs') %>
+    
     <h1>Movie Home Page </h1>
     <div>
         <% for(let i=0; i<movies.length; i++){ %>
@@ -19,7 +14,7 @@
             <div>
                 <h2><a href="/movies/<%=movie._id%>"><%=movie.title%></a></h2>
                 <p><%=movie.releaseDate%></p>
-                <img class="index-pic" src="<%=movie.image%>" alt="<%=movie.title%>">
+                <img class="index pic" src="<%=movie.image%>" alt="<%=movie.title%>">
             </div>
         <% } %>
     </div>

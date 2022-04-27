@@ -1,16 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie Show</title>
-</head>
+
+    <%- include('partials/head.ejs') %>
+
 <body>
-    <nav>
-        <a href="/movies">Index</a>
-        <a href="/movies/new">New</a>
-    </nav>
+
+    <%- include('partials/nav.ejs') %>
+
     <h1>Show Page</h1>
+
+    <h2><%=movie.title%></h2>
+    <p><%=movie.releaseDate%></p>
+    <img class="show pic" src="<%=movie.image%>" alt="<%=movie.title%>">
+    <div>
+        <a href="/movies/<%=movie._id%>/edit">Edit <%= movie.name %></a>
+    </div>
+
+    <% for(let i=0; i<reviews.length; i++) { %>
+        <div>
+            <h3>Rating: <%=reviews[i].rating%></h3>
+            <p><%=reviews[i].comment%></p>
+        </div>
+    <% } %>
+
 </body>
 </html>

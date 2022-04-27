@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+<<<<<<< HEAD
+
+    <%- include('partials/head.ejs') %>
+
+=======
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,11 +12,11 @@
     <title>Movie Page</title>
     <link rel="stylesheet" href="styles/main.css">
 </head>
+>>>>>>> b04ce28b60bab3dd0c9226c5b59ca5800d40c080
 <body>
-    <nav>
-        <a href="/movies">Index</a>
-        <a href="/movies/new">New</a>
-    </nav>
+
+    <%- include('partials/nav.ejs') %>
+    
     <h1>New Movie Page</h1>
     <form method="POST" action="/movies">
         <div>

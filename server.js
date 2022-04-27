@@ -26,6 +26,8 @@ app.use(express.urlencoded({ extended: false }))
 //Controllers
 app.use('/movies', controllers.movies)
 
+// Reviews Router
+app.use('/reviews', controllers.reviews)
 
 // "Home" route
 app.get('/', (req,res) =>

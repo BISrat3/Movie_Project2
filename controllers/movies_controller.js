@@ -1,5 +1,8 @@
 // import express
 const express = require('express')
+const methodOverride = require('method-override')
+const { reviews } = require('.')
+
 
 const router = express.Router()
 
@@ -10,7 +13,6 @@ const db = require('../models')
 router.get('/', async (req, res, next) =>{
     try {
         const movies = await db.Movie.find({})
-        console.log(movies)
         const context = { movies }
         res.render('index.ejs', context)
     } catch (error) {
@@ -23,6 +25,23 @@ router.get('/', async (req, res, next) =>{
 // "New" route
 router.get('/new', (req,res) => {
     res.render('new.ejs')
+})
+
+router.get('/:id', async (req, res, next) => {
+    try {
+        const foundMovie = await db.Movie.findById(req.params.id)
+        const reviews = await db.Review.find({product: req.params.id})
+        console.log(reviews.length, 'Reviews Found');
+        const context = {
+            movie: foundMovie,
+            reviews: reviews,
+        }
+        res.render('show.ejs', context)
+    } catch (error) {
+        console.log(error);
+        req.error = error;
+        return next();
+    }
 })
 
 // Post "New" route

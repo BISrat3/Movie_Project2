@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head.ejs') %>
+<body>
+    <a href="/movies">Home</a>
+    <h1>Sign in</h1>
+    <form action="">
+        <label for="name"><br /> User Name</label>
+        <input type="text" placeholder="Enter User Name/ Email address" name="name" required> <br />
+        <label for="password"><br /> Password</label>
+        <input type="text" placeholder="Enter Password" name="password" required> <br />
+        <label for="remember">
+            <br />
+            <input type="checkbox" checked="checked" name="remember">Remember me
+        </label> <br />
+        <button type="submit"><h3>Signin</h3></button>
+    </form>
+    <br />
+    ------------------- Or----------------------
+    <br />
+    <a href="/users/new"> <button><h2>Create New User</h4></button> </a>
+</body>
+</html>

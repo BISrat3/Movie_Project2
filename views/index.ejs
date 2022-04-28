@@ -5,17 +5,22 @@
     <%- include('partials/nav.ejs') %>  
     <h1>Movie Home Page </h1>
     <div>
+        <label for="name"><br /> User Name</label>
+        <input type="text" placeholder="Enter User Name/ Email address" name="name" required> <br />
+        <label for="password"><br /> Password</label>
+        <input type="text" placeholder="Enter Password" name="password" required> <br />
+        <label for="remember">
+            <input type="checkbox" checked="checked" name="remember">Remember me
+        </label> <br />
+        <button type="submit">Signin</button>
+    </div>
+    <div>
         <% for(let i=0; i<movies.length; i++){ %>
             <% const movie = movies[i] %>
             <div>
                 <h2><a href="/movies/<%=movie._id%>"><%=movie.title%></a></h2>
                 <p><%=movie.releaseDate%></p>
                 <img class="index pic" src="<%=movie.image%>" alt="<%=movie.title%>">
-            </div>
-            <div>
-                <form method="POST" action="/movies/<%= movie._id %>?_method=DELETE">
-                    <input type="submit" value="Delete Movie">
-                </form>
             </div>
         <% } %>
     </div>

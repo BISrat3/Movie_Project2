@@ -2,6 +2,18 @@ body {
     background-color:  pink;
 }
 
+h2 {
+    margin: 0 auto;
+}
+
+h3 {
+    margin: 0 auto;
+}
+
+p {
+    margin: 0 auto;
+}
+
 .pic {
     width: 300px;
     height: 500px;

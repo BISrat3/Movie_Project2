@@ -22,3 +22,7 @@ body {
     font-size: 18px;
     border-radius: 20px solid red;
 }
+
+.hidden {
+    display: none;
+}

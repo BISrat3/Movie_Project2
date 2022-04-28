@@ -26,4 +26,9 @@ router.post('/', async (req, res, next) => {
     }
 })
 
+// "New" sing In route
+router.get('/signin', (req,res) => {
+    res.render('users/signin.ejs')
+})
+
 module.exports = router

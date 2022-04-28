@@ -5,20 +5,7 @@ const router = express.Router()
 // Models - databases
 const db = require('../models')
 
-// index route - serve
-router.get('/', async (req, res, next) => {
-    try {
-        const users = await db.User.find({})
-        res.render('users/')
-    }
-    catch(error){
-        console.log(error)
-        req.error = error
-        return next()
-    }
-})
-
-/// "New" route
+// "New" route
 router.get('/new', (req,res) => {
     res.render('users/new.ejs')
 })
@@ -30,7 +17,8 @@ router.post('/', async (req, res, next) => {
         console.log(req.body)
         const newUser= await db.User.create(newUserData)
         console.log(newUser)
-        res.redirect('/users')
+        res.redirect('/movies')
+
     } catch (error) {
         console.log(error);
         req.error = error;

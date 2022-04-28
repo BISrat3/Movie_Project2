@@ -8,6 +8,11 @@
     <p><%=movie.releaseDate%></p>
     <img class="show pic" src="<%=movie.image%>" alt="<%=movie.title%>">
     <div>
+        <form method="POST" action="/movies/<%= movie._id %>?_method=DELETE">
+            <input type="submit" value="Delete Movie">
+        </form>
+    </div>
+    <div>
         <a href="/movies/<%=movie._id%>/edit">Edit <%= movie.title %></a>
     </div>
     <div>

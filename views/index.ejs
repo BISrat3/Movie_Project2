@@ -22,11 +22,6 @@
                 <p><%=movie.releaseDate%></p>
                 <img class="index pic" src="<%=movie.image%>" alt="<%=movie.title%>">
             </div>
-            <div>
-                <form method="POST" action="/movies/<%= movie._id %>?_method=DELETE">
-                    <input type="submit" value="Delete Movie">
-                </form>
-            </div>
         <% } %>
     </div>
 </body>

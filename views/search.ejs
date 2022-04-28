@@ -9,7 +9,8 @@
         <% for(let i=0; i<movieData.Search.length; i++){ %>
             <% const movie = movieData.Search[i] %>
             <div class="movie">
-                <h2 class="movie-title"><%=movie.Title%></h2>
+                <p><%=movie.imdbID%></p>
+                <h2 class="movie-title"><a href="/movies/s/<%=movie.imdbID%>"><%=movie.Title%></a></h2>
                 <p class="movie-year"><%=movie.Year%></p>
                 <div class="poster-frame">
                     <img class="movie-poster" src="<%=movie.Poster%>" alt="<%=movie.Title%>">

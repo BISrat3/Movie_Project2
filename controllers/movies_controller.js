@@ -1,5 +1,6 @@
 // import express
 const express = require('express')
+const axios = require('axios');
 
 const router = express.Router()
 
@@ -22,6 +23,26 @@ router.get('/', async (req, res, next) =>{
 // "New" route
 router.get('/new', (req,res) => {
     res.render('new.ejs')
+})
+
+// "Search" route
+router.post('/s', async (req, res, next) => {
+    const queryOptions = {
+        params: {
+            s: req.body.search,
+            apikey: process.env.KEY
+        }
+    };
+    // Tells axios to go to this url, and add the query options
+    axios.get('http://www.omdbapi.com', queryOptions)
+        .then(function (response) {
+            // res.send(response.data)          // Prints out database in browser
+            // res.send(response.data.Search[0])   // Prints out first data obj in browser
+            let context = {
+                movieData: response.data
+            }
+            res.render('search.ejs', context);
+        })
 })
 
 router.get('/:id', async (req, res, next) => {

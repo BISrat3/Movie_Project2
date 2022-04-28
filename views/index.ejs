@@ -4,6 +4,13 @@
 <body>
     <%- include('partials/nav.ejs') %>  
     <h1>Movie Home Page </h1>
+    <form method="POST" action="/movies/s">
+        <div>
+            <label for="search">Search:</label>
+            <input type="text" name="search" id="">
+        </div>
+        <input type="submit" id="" value="Search">
+    </form>
     <div>
         <label for="name"><br /> User Name</label>
         <input type="text" placeholder="Enter User Name/ Email address" name="name" required> <br />

@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 
 // User Schema
 const userSchema = new mongoose.Schema({
-    userName: {
+    username: {
         type: String,
         required: [true, "You must provide a movie title"],
     },
@@ -14,4 +14,4 @@ const userSchema = new mongoose.Schema({
 const User = mongoose.model('User', userSchema)
 
 // Export User
-module.exports = Movie
+module.exports = User

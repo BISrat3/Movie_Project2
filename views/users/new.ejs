@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head.ejs') %>
+<body>
+    <%- include('../partials/nav.ejs') %>
+    <h1>New User</h1>
+    <form method="POST" action="/users">
+        <div>
+            <label for="use"> Username : </label>
+            <input id="rating" name="user" type="string" />
+        </div>
+        <div>
+            <label for="pasword"> Password : </label>
+            <input id="password" name="comment" type="string" />
+        </div>
+        <div>
+            <label for=""> New User </label>
+            <select name="user" id="">
+                <% for(let i=0; i< users.length; i++) { %>
+                    <option value="<%=users[i]._id%>"><%=users[i].username%></option>
+                <% } %>
+            </select>
+        </div>
+        <input type="submit" value="Create new User">
+    </form>
+</body>
+</html>

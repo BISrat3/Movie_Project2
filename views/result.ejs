@@ -22,5 +22,26 @@
         </div>
         <input type="submit" id="" value="Add Movie To MongoDB">
     </form>
+    <!--  -->
+    <p><%=imdbData.tagline%></p>
+    <p><%=imdbData.runtimeStr%></p>
+    <p><%=imdbData.awards%></p>
+    <p><%=imdbData.contentRating%></p>
+    <p><%=imdbData.imDbRating%></p>
+    <p><%=imdbData.metacriticRating%></p>
+    <h2>Genres:</h2>
+    <% for(let i=0; i<imdbData.genreList; i++){ %>
+        <p><%=imdbData.genreList[i].key%></p>
+    <% } %>
+
+    <h2>Similar</h2>
+    <div>
+        <% for(let i=0; i<imdbData.similars.length; i++){ %>
+            <div>
+                <h3><a href="/movies/s/<%=imdbData.similars[i].id%>"><%=imdbData.similars[i].title%></a></h3>
+                <img src="<%=imdbData.similars[i].image%>" alt="<%=imdbData.similars[i].title%>">
+            </div>
+        <% } %>
+    </div>
 </body>
 </html>

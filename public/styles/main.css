@@ -2,9 +2,27 @@ body {
     background-color:  pink;
 }
 
+h2 {
+    margin: 0 auto;
+}
+
+h3 {
+    margin: 0 auto;
+}
+
+p {
+    margin: 0 auto;
+}
+
 .pic {
     width: 300px;
     height: 500px;
+    object-fit: contain;
+}
+
+.pic-small {
+    width: 100px;
+    height: 200px;
     object-fit: contain;
 }
 
@@ -21,4 +39,8 @@ body {
 .deleteBtn{
     font-size: 18px;
     border-radius: 20px solid red;
+}
+
+.hidden {
+    display: none;
 }

@@ -1,5 +1,6 @@
 // import express
 const express = require('express')
+
 const axios = require('axios');
 
 const router = express.Router()
@@ -42,6 +43,18 @@ router.post('/s', async (req, res, next) => {
                 movieData: response.data
             }
             res.render('search.ejs', context);
+        })
+})
+
+// Imdb Show route
+router.get('/s/:imdbId', async (req, res, next) => {
+    // Tells axios to go to this url
+    axios.get(`http://www.imdb-api.com/en/API/Title/${process.env.imdbKEY}/${req.params.imdbId}`)
+        .then(function (response) {
+            let context = {
+                imdbData: response.data
+            }
+            res.render('result.ejs', context);
         })
 })
 

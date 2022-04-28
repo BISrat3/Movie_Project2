@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head.ejs') %>
+<body>
+    <%- include('partials/nav.ejs') %>
+    <h1><%=imdbData.title%></h1>
+    <img class="pic" src="<%=imdbData.image%>" alt="">
+    <p><%=imdbData.releaseDate%></p>
+    <p><%=imdbData.year%></p>
+    <p><%=imdbData.plot%></p>
+    <p><%=imdbData.directors%></p>
+    <p><%=imdbData.stars%></p>
+    <form method="POST" action="/movies">
+        <div class="hidden">
+            <input type="text" name="title" id="" value="<%=imdbData.title%>">
+            <input type="text" name="image" id="" value="<%=imdbData.image%>">
+            <input type="date" name="releaseDate" id="" value="<%=imdbData.releaseDate%>">
+            <input type="text" name="plot" id="" value="<%=imdbData.plot%>">
+            <input type="text" name="year" id="" value="<%=imdbData.year%>">
+            <input type="text" name="director" id="" value="<%=imdbData.directors%>">
+            <input type="text" name="stars" id="" value="<%=imdbData.stars%>">
+        </div>
+        <input type="submit" id="" value="Add Movie To MongoDB">
+    </form>
+    <!--  -->
+    <p><%=imdbData.tagline%></p>
+    <p><%=imdbData.runtimeStr%></p>
+    <p><%=imdbData.awards%></p>
+    <p><%=imdbData.contentRating%></p>
+    <p><%=imdbData.imDbRating%></p>
+    <p><%=imdbData.metacriticRating%></p>
+    <h2>Genres:</h2>
+    <% for(let i=0; i<imdbData.genreList; i++){ %>
+        <p><%=imdbData.genreList[i].key%></p>
+    <% } %>
+
+    <h2>Similar</h2>
+    <div>
+        <% for(let i=0; i<imdbData.similars.length; i++){ %>
+            <div>
+                <h3><a href="/movies/s/<%=imdbData.similars[i].id%>"><%=imdbData.similars[i].title%></a></h3>
+                <img class="pic-small" src="<%=imdbData.similars[i].image%>" alt="<%=imdbData.similars[i].title%>">
+            </div>
+        <% } %>
+    </div>
+</body>
+</html>

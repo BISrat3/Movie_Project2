@@ -39,7 +39,7 @@
         <% for(let i=0; i<imdbData.similars.length; i++){ %>
             <div>
                 <h3><a href="/movies/s/<%=imdbData.similars[i].id%>"><%=imdbData.similars[i].title%></a></h3>
-                <img src="<%=imdbData.similars[i].image%>" alt="<%=imdbData.similars[i].title%>">
+                <img class="pic-small" src="<%=imdbData.similars[i].image%>" alt="<%=imdbData.similars[i].title%>">
             </div>
         <% } %>
     </div>

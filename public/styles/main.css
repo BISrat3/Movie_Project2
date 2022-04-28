@@ -8,6 +8,12 @@ body {
     object-fit: contain;
 }
 
+.pic-small {
+    width: 100px;
+    height: 200px;
+    object-fit: contain;
+}
+
 .btn{
     background-color: green;
 

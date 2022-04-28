@@ -5,7 +5,7 @@ const router = express.Router()
 // Models - databases
 const db = require('../models')
 
-/// "New" route
+// "New" route
 router.get('/new', (req,res) => {
     res.render('users/new.ejs')
 })
@@ -18,6 +18,7 @@ router.post('/', async (req, res, next) => {
         const newUser= await db.User.create(newUserData)
         console.log(newUser)
         res.redirect('/movies')
+
     } catch (error) {
         console.log(error);
         req.error = error;

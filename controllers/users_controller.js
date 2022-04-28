@@ -9,7 +9,7 @@ const db = require('../models')
 router.get('/', async (req, res, next) => {
     try {
         const users = await db.User.find({})
-        res.send(users)
+        res.render('users/')
     }
     catch(error){
         console.log(error)
@@ -37,6 +37,5 @@ router.post('/', async (req, res, next) => {
         return next();
     }
 })
-
 
 module.exports = router

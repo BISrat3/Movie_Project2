@@ -2,10 +2,10 @@
 <html lang="en">
     <%- include('../partials/head.ejs') %>
 <body>
-    <%- include('../partials/nav.ejs')%>
+     <%- include('../partials/nav.ejs') %> 
+    <a href="/movies">Home</a>
     <h1> New User Page</h1>
     <p>User: <%=users.username%></p> 
     <p>password: <%=users.password%></p>
-    <a href="/movies/<%=users.movie._id%>">Find more information about <%=users.movie.username%></a>
 </body>
 </html>

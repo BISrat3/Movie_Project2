@@ -34,7 +34,7 @@ app.use('/movies', controllers.movies)
 // Reviews Router
 app.use('/reviews', controllers.reviews)
 
-// Reviews Router
+// Users Router
 app.use('/users', controllers.users)
 
 // "Home" route

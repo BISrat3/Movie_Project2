@@ -2,7 +2,8 @@
 <html lang="en">
     <%- include('../partials/head.ejs') %>
 <body>
-    <%- include('../partials/nav.ejs') %>  
+    
+    <a href="/movies">Home</a>
     <h1>New User</h1>
     <form method="POST" action="/users">
         <div>
@@ -12,7 +13,7 @@
         <br />
         <div>
             <label for="password"> Password : </label>
-            <input id="password" name="password" type="string" />
+            <input id="password" name="password" minlength="8"/>
         </div>
         <br />
         <div>

@@ -18,18 +18,25 @@ router.get('/', async (req, res, next) => {
     }
 })
 
-// new route - review
-router.get ('/new', async (req, res, next) => {
+/// "New" route
+router.get('/new', (req,res) => {
+    res.render('users/new.ejs')
+})
+
+// Post "User" route
+router.post('/', async (req, res, next) => {
     try {
-        const users = await db.User.find({})
-        console.log(users)
-        const context = {users: users}
-        res.render('users/new.ejs', context)
+        const newUserData = req.body
+        console.log(req.body)
+        const newUser= await db.User.create(newUserData)
+        console.log(newUser)
+        res.redirect('/users')
     } catch (error) {
         console.log(error);
         req.error = error;
         return next();
     }
 })
+
 
 module.exports = router

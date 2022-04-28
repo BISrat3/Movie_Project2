@@ -34,6 +34,9 @@ app.use('/movies', controllers.movies)
 // Reviews Router
 app.use('/reviews', controllers.reviews)
 
+// Reviews Router
+app.use('/users', controllers.users)
+
 // "Home" route
 app.get('/', (req,res) =>
     res.send("Welcome to Movie Page"))

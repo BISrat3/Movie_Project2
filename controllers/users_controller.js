@@ -2,8 +2,6 @@ const express = require('express')
 
 const bcrypt = require('bcryptjs')
 
-require('dotenv').config()
-
 const router = express.Router()
 
 // Models - databases
@@ -20,15 +18,9 @@ router.post('/signin', async (req, res) => {
         // Check if user exists
         const foundUser = await db.User.findOne({username:req.body.username})
         console.log(foundUser)
-        // If not, redirect to register
         if (!foundUser) return (res.redirect('/register'))
-        // If the user exists, validate the user if passwords match -> SignIn
-        // .compare(body password, hashed password) => return true or false
         const match = await bcrypt.compare(req.body.password, foundUser.password)
-        // If not matched, send error
         if(!match) return res.send("Wrong password")
-        // If match create the session and redirect to /home
-        // Here we have created the key card
         req.session.currentUser ={
             id: foundUser._id,
             username: foundUser.username,

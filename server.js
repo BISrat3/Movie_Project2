@@ -35,12 +35,11 @@ app.use(express.urlencoded({ extended: false }))
 app.use(
     session({
         store: MongoStore.create({ mongoUrl: process.env.MONGODB_URI }),
-        // secret key is used to sign every cookie to say its is valid
         secret: "super secret",
         resave: false,
         saveUninitialized: false,
         cookie: {
-            maxAge: 1000 * 60 * 60 * 24 * 7 * 2, // two weeks
+            maxAge: 1000 * 60 * 60 * 24 * 7 * 2,
         },
     })
 );

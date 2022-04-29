@@ -1,3 +1,12 @@
+body {
+    display: flex;
+    flex-direction: column;
+    background-color:  grey;
+    margin: 0 auto;
+    width: 0 auto;
+    background-image: url('https://media3.giphy.com/media/l2v1YQMVH8rEAstMyK/giphy.gif?cid=ecf05e47hrmpybzzlbla5jf1cwcaahh6m7goz1dz2k21a3km&rid=giphy.gif&ct=g');
+}
+
 .row {
     display: flex;
     flex-direction: row;
@@ -15,13 +24,6 @@
     justify-content: center;
 }
 
-body {
-    display: flex;
-    flex-direction: column;
-    background-color:  grey;
-    margin: 0;
-}
-
 h1 {
     margin: 0 auto;
 }
@@ -37,15 +39,16 @@ h3 {
 p {
     margin: 0 auto;
 }
-/* 
+
 nav {
     display: flex;
     flex-direction: row;
     align-items: center;
     height: 30px;
-} */
-/* 
-nav a{
+    margin-top: 40px;
+}
+
+/* nav a{
     text-align: center;
     text-decoration: none;
 } */
@@ -60,7 +63,26 @@ nav a div {
     padding: 0 10px;
 }
 
+.search{
+    margin-left: 25%;
+    margin-right: 25%;
+}
 
+.search .searchengine{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 2px solid grey;
+    cursor:pointer;
+    font-size:20px;
+    padding:10px;
+    width :250px;
+}
+
+.search .searchBtn{
+    width:100px;
+    font-size: 15px;
+}
 .show {
     color: white;
     width: 400px;

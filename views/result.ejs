@@ -18,22 +18,23 @@
     <p><%=imdbData.metacriticRating%></p>
     <form method="POST" action="/movies">
         <div class="hidden">
-            <input type="text" name="title" id="" value="<%=imdbData.title%>">
-            <input type="text" name="image" id="" value="<%=imdbData.image%>">
-            <input type="date" name="releaseDate" id="" value="<%=imdbData.releaseDate%>">
-            <input type="text" name="plot" id="" value="<%=imdbData.plot%>">
-            <input type="text" name="year" id="" value="<%=imdbData.year%>">
-            <input type="text" name="director" id="" value="<%=imdbData.directors%>">
-            <input type="text" name="stars" id="" value="<%=imdbData.stars%>">
-            <input type="text" name="tagline" id="" value="<%=imdbData.tagline%>">
-            <input type="text" name="runtimeStr" id="" value="<%=imdbData.runtimeStr%>">
-            <input type="text" name="awards" id="" value="<%=imdbData.awards%>">
-            <input type="text" name="contentRating" id="" value="<%=imdbData.contentRating%>">
-            <input type="text" name="imDbRating" id="" value="<%=imdbData.imDbRating%>">
-            <input type="text" name="metacriticRating" id="" value="<%=imdbData.metacriticRating%>">
+            <input type="text" name="title" value="<%=imdbData.title%>">
+            <input type="text" name="image" value="<%=imdbData.image%>">
+            <input type="date" name="releaseDate" value="<%=imdbData.releaseDate%>">
+            <input type="text" name="plot" value="<%=imdbData.plot%>">
+            <input type="text" name="year" value="<%=imdbData.year%>">
+            <input type="text" name="director" value="<%=imdbData.directors%>">
+            <input type="text" name="stars" value="<%=imdbData.stars%>">
+            <input type="text" name="tagline" value="<%=imdbData.tagline%>">
+            <input type="text" name="runtimeStr" value="<%=imdbData.runtimeStr%>">
+            <input type="text" name="awards" value="<%=imdbData.awards%>">
+            <input type="text" name="contentRating" value="<%=imdbData.contentRating%>">
+            <input type="text" name="imDbRating" value="<%=imdbData.imDbRating%>">
+            <input type="text" name="metacriticRating" value="<%=imdbData.metacriticRating%>">
         </div>
-        <input type="submit" id="" value="Add Movie To MongoDB">
+        <input type="submit" value="Add Movie To MongoDB">
     </form>
+    
     <h2>Genres:</h2>
     <% for(let i=0; i<imdbData.genreList; i++){ %>
         <p><%=imdbData.genreList[i].key%></p>

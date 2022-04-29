@@ -3,7 +3,7 @@ const routes = [
 ];
 
 const usersRoutes = [
-    { href: "/users/singin", title: "signin" },
+    { href: "/users/signin", title: "signin" },
     { href: "/users/new", title: "Register" },
 ];
 

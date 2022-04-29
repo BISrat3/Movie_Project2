@@ -16,9 +16,6 @@ const navLinks = require('./navLinks')
 // create instance
 const app = express()
 
-// configure the app settings 
-const PORT = 3000
-
 // Connection to MongoDB
 require('./config/db.connection');
 
@@ -64,11 +61,11 @@ app.use('/movies', controllers.movies)
 app.use('/reviews', controllers.reviews)
 
 // Users Router
-app.use('/users', controllers.users)
+app.use('/', controllers.users)
 
 // "Home" route
 app.get('/', (req,res) =>
     res.send("Welcome to Movie Page"))
 
-app.listen(PORT, ()=>
-    console.log(`Listening on port: ${PORT}`))
+app.listen(process.env.PORT, ()=>
+    console.log(`Listening on port: ${process.env.PORT}`))

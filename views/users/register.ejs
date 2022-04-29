@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head.ejs') %>
+<body>
+    <a href="/movies">Home</a>
+    <h1>Register New User</h1>
+    <form method="POST" action="/register">
+        <div>
+            <label for="email"> Email: </label>
+            <input name="email" placeholder="example@domain.com"/>
+        </div>
+        <div>
+            <label for="username"> Username : </label>
+            <input name="username" type="text" />
+        </div>
+        <br />
+        <div>
+            <label for="password"> Password : </label>
+            <input name="password" type="password" minlength="8"/>
+        </div>
+        <br />
+        <div>
+            <input type="submit" value="Register">
+        </div>
+    </form>
+</body>
+</html>

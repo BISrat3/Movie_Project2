@@ -61,7 +61,7 @@ app.use('/movies', controllers.movies)
 app.use('/reviews', controllers.reviews)
 
 // Users Router
-app.use('/users', controllers.users)
+app.use('/', controllers.users)
 
 // "Home" route
 app.get('/', (req,res) =>

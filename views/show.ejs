@@ -3,18 +3,22 @@
     <%- include('partials/head.ejs') %>
 <body>
     <%- include('partials/nav.ejs') %>
+    <br>
     <h1><%=movie.title%></h1>
     <p><%=movie.year%> | <%=movie.contentRating%> | <%=movie.runtimeStr%></p>
-    
+    <br>
     <div class="container">
         <img class="show pic" src="<%=movie.image%>" alt="<%=movie.title%>">
         <div class="show column">
             <h3><%=movie.tagline%></h3>
+            <p><%=movie.genres%></p>
             <p><%=movie.plot%></p>
             <br>
             <p><%=movie.directors%></p>
+            <p><%=movie.writers%></p>
             <p><%=movie.stars%></p>
             <p><%=movie.releaseDate.toLocaleDateString()%></p>
+            <p><%=movie.companies%></p>
             <p><%=movie.awards%></p>
             <p><%=movie.imDbRating%></p>
             <p><%=movie.metacriticRating%></p>
@@ -27,7 +31,7 @@
         </div>
         <div class=" show column">
             <h2>Reviews</h2>
-            <a href="/reviews/new">Add Review</a>
+            <a href="/reviews/new"><button>Add Review</button></a>
             <% for(let i=0; i<reviews.length; i++) { %>
                 <% if( reviews[i].movie._id.equals(movie._id) ){ %>
                 <div class="show column">

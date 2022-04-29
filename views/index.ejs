@@ -3,19 +3,19 @@
     <%- include('partials/head.ejs') %>
 <body>
     <%- include('partials/nav.ejs') %>  
+    <br>
     <h1>Movie Home Page </h1>
+    <br>
     
-    <br />
-    <div>
-        <a href="users/signin"><button class="singinBtn">Signin</button></a>
-    </div>
     <div class="container">
         <% for(let i=0; i<movies.length; i++){ %>
             <% const movie = movies[i] %>
+            <a href="/movies/<%=movie._id%>" class="index">
             <div class="column">
-                <h2><a href="/movies/<%=movie._id%>"><%=movie.title%></a></h2>
+                <h2><%=movie.title%></h2>
                 <img class="index pic" src="<%=movie.image%>" alt="<%=movie.title%>">
             </div>
+            </a>
         <% } %>
     </div>
 </body>

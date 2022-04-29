@@ -12,14 +12,18 @@ const movieSchema = new mongoose.Schema({
     plot: String,
     year: String,
     directors: String,
+    writers: String,
     stars: String,
-    genre: [],
+    genres: String,
     tagline: String,
+    runtimeMins: String,
     runtimeStr: String,
+    companies: String,
     awards: String,
     contentRating: String,
     imDbRating: String,
     metacriticRating: String,
+    similars: [],
 })
 
 // Models Movie Schema

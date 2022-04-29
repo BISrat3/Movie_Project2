@@ -11,6 +11,8 @@ const session = require("express-session")
 
 const MongoStore = require("connect-mongo")
 
+const navLinks = require('./navLinks')
+
 // create instance
 const app = express()
 
@@ -42,6 +44,15 @@ app.use(
         },
     })
 );
+
+app.use(navLinks)
+
+app.use(function (req, res, next){
+    res.locals.user =req.session.currentUser;
+    console.log(res.locals)
+    console.log(`Current user is ${res.locals.user}`)
+    next()
+})
 
 //Controllers
 app.use('/movies', controllers.movies)

@@ -37,18 +37,18 @@ h3 {
 p {
     margin: 0 auto;
 }
-
+/* 
 nav {
     display: flex;
     flex-direction: row;
     align-items: center;
     height: 30px;
-}
-
+} */
+/* 
 nav a{
     text-align: center;
     text-decoration: none;
-}
+} */
 
 nav a:hover {
     background-color: lightblue;

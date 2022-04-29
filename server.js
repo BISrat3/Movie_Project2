@@ -45,12 +45,11 @@ app.use(
     })
 );
 
+// Nav Links Middleware
 app.use(navLinks)
 
 app.use(function (req, res, next){
-    res.locals.user =req.session.currentUser;
-    console.log(res.locals)
-    console.log(`Current user is ${res.locals.user}`)
+    res.locals.user = req.session.currentUser
     next()
 })
 

@@ -1,11 +1,15 @@
-<nav>
-    <a href="/movies"><div>Index</div></a>
-    <a href="/movies/new"><div>New Movie</div></a>
-    <a href="/users/signin"><div>Signin</div></a>
+<div class="navbar-menu navbar-end">
+    <% if (typeof user !== 'undefined') { %>
+    <p class="navbar-item"><%= user.username %></p>
+    <% } %>
+    <!-- routes -->
+    <% if (typeof routes !== 'undefined') { %> <% routes.forEach((route) => { %>
+    <a class="navbar-item" href="<%= route.href %>"> <%= route.title %> </a>
+    <% }) %> <% } %>
     <form method="POST" action="/movies/s">
         <div class="search">
             <input type="text" name="search"  placeholder="Search">
             <input type="submit" value="Search">
         </div>
     </form>
-</nav>
+</div>

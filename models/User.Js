@@ -5,9 +5,13 @@ const mongoose = require('mongoose')
 const userSchema = new mongoose.Schema({
     username: {
         type: String,
-        required: [true, "You must provide a reason for your user name"],
+        required: [true, "You must provide a your user name"],
     },
-    password: String,
+    password: {
+        type: String,
+        required: [true, "You must provide a your user name"],
+    }
+
 })
 
 // Models User Schema

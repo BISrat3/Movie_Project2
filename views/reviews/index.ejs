@@ -7,6 +7,7 @@
     <title>Reviews Index</title>
 </head>
 <body>
+    <%- include('../partials/nav.ejs') %>
     <h1>Review Index Page</h1>
     <% for(let i=0; i<reviews.length; i++){ %>
         <% const review = reviews[i] %>
@@ -28,7 +29,7 @@
             <br />
             <%= review.comment %>
             <a href="/movies/<%= review.movie._id %>"><%= review.movie.title %></a>
-            <div>
+            <div class="row">
                 <a href="/reviews/<%=reviews[i]._id%>/edit"><button class="editBtn">Edit Review</button></a>
                 <form method="POST" action="/reviews/<%= review._id %>?_method=DELETE">
                     <input type="submit" value="Delete Review" class="deleteBtn">

@@ -23,6 +23,7 @@ const movieSchema = new mongoose.Schema({
     contentRating: String,
     imDbRating: String,
     metacriticRating: String,
+    similars: [],
 })
 
 // Models Movie Schema

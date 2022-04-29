@@ -18,7 +18,7 @@
 body {
     display: flex;
     flex-direction: column;
-    background-color:  pink;
+    background-color:  grey;
     margin: 0;
 }
 
@@ -62,7 +62,12 @@ nav a div {
 
 
 .show {
+    color: white;
     width: 400px;
+    background-color: black;
+    border: 10px solid black;
+    border-radius: 10px;
+    margin: 10px;
 }
 
 .pic {
@@ -71,15 +76,27 @@ nav a div {
     object-fit: contain;
 }
 
+.index {
+    width: 200px;
+    color: white;
+    font-size: .5em;
+    text-decoration: none;
+    background-color: black;
+    border: 10px solid black;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.index.pic {
+    width: 200px;
+    height: 300px;
+    background-color: black;
+}
+
 .pic-small {
     width: 100px;
     height: 200px;
     object-fit: contain;
-}
-
-.singinBtn{
-    display:flex;
-    justify-content: center;
 }
 
 .hidden {

@@ -78,6 +78,7 @@ router.get('/:id', async (req, res, next) => {
 // Post "New" route
 router.post('/', async (req, res, next) => {
     try {
+        console.log(req.body)
         const createMovie = await db.Movie.create(req.body)
         console.log(createMovie)
         res.redirect('/movies')

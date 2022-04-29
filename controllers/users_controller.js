@@ -6,7 +6,6 @@ const router = express.Router()
 
 // Models - databases
 const db = require('../models')
-const { User } = require('../models')
 
 // "New" route
 router.get('/new', (req,res) => {
@@ -16,14 +15,14 @@ router.get('/new', (req,res) => {
 // Post "New User registration" route
 router.post('/', async (req, res, next) => {
     try {
-        const foundUser = await User.exists({username: req.body.username})
+        const foundUser = await db.User.exists({username: req.body.username})
         if (foundUser){
             return res.redirect('users/signin')
         }
         const salt = await bcrypt.genSalt(10)
         const hash = await bcrypt.hash(req.body.password, salt)
         req.body.password = hash
-        const newUser= await User.create(req.body)
+        const newUser= await db.User.create(req.body)
         return res.redirect('/movies')
     } catch (error) {
         console.log(error);
@@ -40,7 +39,7 @@ router.get('/signin', (req,res) => {
 // Post "User" route
 router.post('/', async (req, res) => {
     try {
-        const foundUser = await User.findOne({username:req.body.username})
+        const foundUser = await db.User.findOne({username:req.body.username})
         console.log(foundUser)
         if (!foundUser)
         return (res.redirect('users/new'))

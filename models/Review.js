@@ -16,8 +16,13 @@ const reviewSchema = new mongoose.Schema({
     movie: {
         type: mongoose.Types.ObjectId,
         ref: 'Movie',
+    },
+    user: {
+        type: mongoose.Types.ObjectId,
+        ref: 'User',
     }
-})
+}, {timestamps: true }
+)
 
 // Models Review Schema
 const Review = mongoose.model('Review', reviewSchema)

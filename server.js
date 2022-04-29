@@ -7,6 +7,10 @@ const methodOverride = require('method-override')
 
 const controllers = require('./controllers')
 
+const session = require("express-session")
+
+const MongoStore = require("connect-mongo")
+
 // create instance
 const app = express()
 
@@ -27,6 +31,20 @@ app.use(methodOverride('_method'))
 
 // body-parser middleware
 app.use(express.urlencoded({ extended: false }))
+
+// Application configuration
+app.use(
+    session({
+        store: MongoStore.create({ mongoUrl: process.env.MONGODB_URI }),
+        // secret key is used to sign every cookie to say its is valid
+        secret: "super secret",
+        resave: false,
+        saveUninitialized: false,
+        cookie: {
+            maxAge: 1000 * 60 * 60 * 24 * 7 * 2, // two weeks
+        },
+    })
+);
 
 //Controllers
 app.use('/movies', controllers.movies)

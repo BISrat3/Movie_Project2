@@ -7,17 +7,33 @@ const router = express.Router()
 const db = require('../models')
 
 // index route - serve
-router.get('/', async (req, res, next) => {
-    try {
-        const reviews = await db.Review.find({})
-        res.send(reviews)
-    }
-    catch(error){
-        console.log(error)
-        req.error = error
-        return next()
-    }
-})
+router.get("/", (req, res) => {
+    db.Review.find({})
+              // here we are adding the user to the populate command so we get both the product and user on a review
+      .populate("movie user")
+      .exec((error, allReviews) => {
+        if (error) {
+          console.log(error);
+          req.error = error;
+          return next();
+        }
+  
+        db.Movie.find({}, (error, allMovies) => {
+          if (error) {
+            console.log(error);
+            req.error = error;
+            return next();
+          }
+  
+          const context = {
+            reviews: allReviews,
+            movies: allMovies,
+          };
+  
+          return res.render("reviews/index", context);
+        });
+      });
+  });
 
 // new route - review
 router.get ('/new', async (req, res, next) => {

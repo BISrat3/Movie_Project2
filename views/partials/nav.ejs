@@ -1,4 +1,10 @@
 <nav>
-    <a href="/movies">Index</a>
-    <a href="/movies/new">New</a>
+    <a href="/movies"><div>Index</div></a>
+    <a href="/movies/new"><div>New Movie</div></a>
+    <form method="POST" action="/movies/s">
+        <div class="search">
+            <input type="text" name="search"  placeholder="Search">
+            <input type="submit" value="Search">
+        </div>
+    </form>
 </nav>

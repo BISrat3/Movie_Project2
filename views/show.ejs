@@ -3,35 +3,47 @@
     <%- include('partials/head.ejs') %>
 <body>
     <%- include('partials/nav.ejs') %>
-    <h1>Show Page</h1>
-    <h2><%=movie.title%></h2>
-    <p><%=movie.releaseDate%></p>
-    <img class="show pic" src="<%=movie.image%>" alt="<%=movie.title%>">
-    <div>
-        <form method="POST" action="/movies/<%= movie._id %>?_method=DELETE">
-            <input type="submit" value="Delete Movie">
-        </form>
-    </div>
-    <div>
-        <a href="/movies/<%=movie._id%>/edit"><button>Edit <%= movie.title %></button> </a>
-    </div>
-    <div>
-        <a href="/reviews/new">Add Review</a>
-    </div>
-    <% for(let i=0; i<reviews.length; i++) { %>
-        <% if( reviews[i].movie._id.equals(movie._id) ){ %>
-        <div>
-            <h3>Rating: <%=reviews[i].rating%></h3>
-            <p><%=reviews[i].comment%></p>
-            <a href="/reviews/<%=reviews[i]._id%>/edit"><button class="editBtn">Edit Review</button> </a> <br />
+    <h1><%=movie.title%></h1>
+    <p><%=movie.year%> | <%=movie.contentRating%> | <%=movie.runtimeStr%></p>
+    
+    <div class="container">
+        <img class="show pic" src="<%=movie.image%>" alt="<%=movie.title%>">
+        <div class="show column">
+            <h3><%=movie.tagline%></h3>
+            <p><%=movie.plot%></p>
+            <br>
+            <p><%=movie.directors%></p>
+            <p><%=movie.stars%></p>
+            <p><%=movie.releaseDate.toLocaleDateString()%></p>
+            <p><%=movie.awards%></p>
+            <p><%=movie.imDbRating%></p>
+            <p><%=movie.metacriticRating%></p>
+            <div class="row">
+                <form method="POST" action="/movies/<%= movie._id %>?_method=DELETE">
+                    <input type="submit" value="Delete Movie" class="deleteBtn">
+                </form>
+                <a href="/movies/<%=movie._id%>/edit"><button class="editBtn">Edit <%= movie.title %></button> </a>
+            </div>
         </div>
-        <div>
-            <form method="POST" action="/reviews/<%= reviews[i]._id %>?_method=DELETE">
-                <br />
-                <input type="submit" value="Delete Review" class="deleteBtn">
-            </form>
+        <div class=" show column">
+            <h2>Reviews</h2>
+            <a href="/reviews/new">Add Review</a>
+            <% for(let i=0; i<reviews.length; i++) { %>
+                <% if( reviews[i].movie._id.equals(movie._id) ){ %>
+                <div class="show column">
+                        <h3>Rating: <%=reviews[i].rating%></h3>
+                        <p><%=reviews[i].comment%></p>
+                    <div class="row">
+                        <a href="/reviews/<%=reviews[i]._id%>/edit"><button class="editBtn">Edit Review</button> </a>
+                        <form method="POST" action="/reviews/<%= reviews[i]._id %>?_method=DELETE">
+                            <input type="submit" value="Delete Review" class="deleteBtn">
+                        </form>
+                    </div>
+                </div>
+                <% } %>
+            <% } %>
         </div>
-        <% } %>
-    <% } %>
+    </div>
+
 </body>
 </html>

@@ -1,13 +1,15 @@
 const routes = [
-    { href: "/signin", title: "signin" },
+    { href: "/movies", title: "Movies" },
+    { href: "/reviews/new", title: "New Review" },
+    { href: "/signout", title: "signout" },
 ];
 
 const usersRoutes = [
-    { href: "/users/signin", title: "signin" },
-    { href: "/users/new", title: "Register" },
+    { href: "/signin", title: "Sign In" },
+    { href: "/register", title: "Register" },
 ];
 
-let navLinks = function hello(req, res, next) {
+module.exports = function navLinks(req, res, next) {
     if (req.session.currentUser) {
         res.locals.routes = routes;
     } else {
@@ -16,5 +18,3 @@ let navLinks = function hello(req, res, next) {
     // locals
     next();
 };
-
-module.exports = navLinks

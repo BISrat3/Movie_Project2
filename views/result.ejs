@@ -8,9 +8,12 @@
     <p><%=imdbData.releaseDate%></p>
     <p><%=imdbData.year%></p>
     <p><%=imdbData.plot%></p>
+    <p><%=imdbData.genres%></p>
     <p><%=imdbData.directors%></p>
     <p><%=imdbData.stars%></p>
+    <p><%=imdbData.companies%></p>
     <p><%=imdbData.tagline%></p>
+    <p><%=imdbData.runtimeMins%></p>
     <p><%=imdbData.runtimeStr%></p>
     <p><%=imdbData.awards%></p>
     <p><%=imdbData.contentRating%></p>
@@ -22,32 +25,38 @@
             <input type="text" name="image" value="<%=imdbData.image%>">
             <input type="date" name="releaseDate" value="<%=imdbData.releaseDate%>">
             <input type="text" name="plot" value="<%=imdbData.plot%>">
+            <input type="text" name="genres" value="<%=imdbData.genres%>">
             <input type="text" name="year" value="<%=imdbData.year%>">
-            <input type="text" name="director" value="<%=imdbData.directors%>">
+            <input type="text" name="directors" value="<%=imdbData.directors%>">
+            <input type="text" name="writers" value="<%=imdbData.writers%>">
             <input type="text" name="stars" value="<%=imdbData.stars%>">
+            <input type="text" name="companies" value="<%=imdbData.companies%>">
             <input type="text" name="tagline" value="<%=imdbData.tagline%>">
+            <input type="text" name="runtimeMins" value="<%=imdbData.runtimeMins%>">
             <input type="text" name="runtimeStr" value="<%=imdbData.runtimeStr%>">
             <input type="text" name="awards" value="<%=imdbData.awards%>">
             <input type="text" name="contentRating" value="<%=imdbData.contentRating%>">
             <input type="text" name="imDbRating" value="<%=imdbData.imDbRating%>">
             <input type="text" name="metacriticRating" value="<%=imdbData.metacriticRating%>">
         </div>
+        <h2>Similar</h2>
+        <div>
+            <% for(let i=0; i<imdbData.similars.length; i++){ %>
+                <div>
+                    <h3><a href="/movies/s/<%=imdbData.similars[i].id%>"><%=imdbData.similars[i].title%></a></h3>
+                    <img class="pic-small" src="<%=imdbData.similars[i].image%>" alt="<%=imdbData.similars[i].title%>">
+                    <p><%=imdbData.imDbRating%></p>
+                    <div class="hidden">
+                        <input type="text" name="similars[<%=i%>]{id}" value="<%=imdbData.similars[i].id%>">
+                        <input type="text" name="similars[<%=i%>]{title}" value="<%=imdbData.similars[i].title%>">
+                        <input type="text" name="similars[<%=i%>]{image}" value="<%=imdbData.similars[i].image%>">
+                        <input type="text" name="similars[<%=i%>]{imDbRating}" value="<%=imdbData.similars[i].imDbRating%>">
+                    </div>
+                </div>
+            <% } %>
+        </div>
         <input type="submit" value="Add Movie To MongoDB">
     </form>
-    
-    <h2>Genres:</h2>
-    <% for(let i=0; i<imdbData.genreList; i++){ %>
-        <p><%=imdbData.genreList[i].key%></p>
-    <% } %>
 
-    <h2>Similar</h2>
-    <div>
-        <% for(let i=0; i<imdbData.similars.length; i++){ %>
-            <div>
-                <h3><a href="/movies/s/<%=imdbData.similars[i].id%>"><%=imdbData.similars[i].title%></a></h3>
-                <img class="pic-small" src="<%=imdbData.similars[i].image%>" alt="<%=imdbData.similars[i].title%>">
-            </div>
-        <% } %>
-    </div>
 </body>
 </html>

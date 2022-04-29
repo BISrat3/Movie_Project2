@@ -10,11 +10,14 @@
         <img class="show pic" src="<%=movie.image%>" alt="<%=movie.title%>">
         <div class="show column">
             <h3><%=movie.tagline%></h3>
+            <p><%=movie.genres%></p>
             <p><%=movie.plot%></p>
             <br>
             <p><%=movie.directors%></p>
+            <p><%=movie.writers%></p>
             <p><%=movie.stars%></p>
             <p><%=movie.releaseDate.toLocaleDateString()%></p>
+            <p><%=movie.companies%></p>
             <p><%=movie.awards%></p>
             <p><%=movie.imDbRating%></p>
             <p><%=movie.metacriticRating%></p>

@@ -7,39 +7,36 @@ const router = express.Router()
 const db = require('../models')
 
 // index route - serve
-router.get("/", (req, res) => {
-    db.Review.find({})
-              // here we are adding the user to the populate command so we get both the product and user on a review
-      .populate("movie user")
-      .exec((error, allReviews) => {
-        if (error) {
-          console.log(error);
-          req.error = error;
-          return next();
+router.get('/', async (req, res, next) => {
+    const allReviews = await db.Review.find({})
+    // console.log(reviews)
+    .populate('movie user')
+    .exec((error,allReviews) => {
+        if(error){
+            console.log(error)
+            req.error = error
+            return next()
         }
-  
         db.Movie.find({}, (error, allMovies) => {
-          if (error) {
-            console.log(error);
-            req.error = error;
-            return next();
-          }
-  
-          const context = {
-            reviews: allReviews,
-            movies: allMovies,
-          };
-  
-          return res.render("reviews/index", context);
-        });
-      });
-  });
+            if(error) {
+                console.log(error)
+                req.error = error
+                return next()
+            }
+            const context = {
+                reviews: allReviews,
+                movies: allMovies,
+            }
+            return res.render('reviews/index.ejs',context)
+        })
+    })
+})
 
 // new route - review
 router.get ('/new', async (req, res, next) => {
     try {
         const movies = await db.Movie.find({})
-        console.log(movies)
+        // console.log(movies)
         const context = {movies: movies}
         res.render('reviews/new.ejs', context)
     } catch (error) {
@@ -53,8 +50,17 @@ router.get ('/new', async (req, res, next) => {
 router.post ('/', async (req, res, next) => {
     // res.send('Hitting Review Create')
     try {
-        const newReviewData = req.body
-        const newReview = await db.Review.create(newReviewData)
+        const newReviewData = {
+            ...req.body,
+            user: req.session.currentUser.id,
+        }
+        const newReview = await db.Review.create(newReviewData, (error,createdReview) => {
+            if (error) {
+                console.log(error);
+                req.error = error;
+                return next();
+            }
+        })
         console.log(newReview)
         // Return user to movie detail page
         res.redirect(`/movies/${newReview.movie}`)
@@ -97,8 +103,8 @@ router.get ('/:reviewId/edit', async (req, res, next) => {
 // Delete Route
 router.delete('/:reviewId', async (req, res, next) =>{
     try {
-        const deleteMovie = await db.Review.findByIdAndDelete(req.params.reviewId)
-        res.redirect('/movies/')
+        const deleteReview = await db.Review.findByIdAndDelete(req.params.reviewId)
+        res.redirect(`/movies/${req.body.movieId}`)
     } catch (error) {
         req.error = error
         return next()

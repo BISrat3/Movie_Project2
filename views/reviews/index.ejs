@@ -4,49 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Reviews Index</title>
 </head>
 <body>
-    <div class="box">
-        <article class="media">
-          <div class="media-left">
-          </div>
-          <div class="media-content">
-            <div class="content">
-              <strong> <%= reviews.user.username %> </strong>
-              <br />
-              <!-- create our stars -->
-      
-              <% for( let index = 0; index < 5; index++ ) { %> <% if (reviews.rating > index) { %>
-              <span class="icon">
-                <i class="fas fa-star yellow"></i>
-              </span>
-              <% } else { %>
-              <span class="icon">
-                <i class="fas fa-star"></i>
-              </span>
-              <% } %> <% } %>
-      
-              <br />
-              <%= reviews.comment%>
-      
-              <hr />
-              <a href="/movies/<%= reviews.movie._id %>">
-                <%= reviews.movie.title %></a>
+    <%- include('../partials/nav.ejs') %>
+    <h1>Review Index Page</h1>
+    <% for(let i=0; i<reviews.length; i++){ %>
+        <% const review = reviews[i] %>
+        <strong> <%= review.user.username %> </strong>
+        <!-- <small> <%# new Date(review.createdAt).toLocaleString() %> </small> -->
+        <br />
+        <!-- create our stars -->
+        
+        <% for( let index = 0; index < 5; index++ ) { %> 
+        <% if (review.rating > index) { %>
+        <span class="icon">
+            <i class="fas fa-star yellow">o</i>
+        </span>
+        <% } else { %>
+            <span class="icon">
+                <i class="fas fa-star">-</i>
+            </span>
+        <% } %> <% } %>
+            <br />
+            <%= review.comment %>
+            <a href="/movies/<%= review.movie._id %>"><%= review.movie.title %></a>
+            <div class="row">
+                <a href="/reviews/<%=reviews[i]._id%>/edit"><button class="editBtn">Edit Review</button></a>
+                <form method="POST" action="/reviews/<%= review._id %>?_method=DELETE">
+                    <input type="submit" value="Delete Review" class="deleteBtn">
+                </form>
             </div>
-          </div>
-          <div class="media-right">
-            <section class="navbar-item has-dropdown is-hoverable">
-              <a class="navbar-link"></a>
-      
-              <div class="navbar-dropdown">
-                <a class="button is-primary m-2 navbar-item"> Edit </a>
-                <hr class="navbar-divider" />
-                <a class="button is-danger m-2 navbar-item">Remove</a>
-              </div>
-            </section>
-          </div>
-        </article>
-      </div>
+                                    
+        <% } %> 
 </body>
 </html>

@@ -1,18 +1,19 @@
 <nav>
-<div class="navbar-menu navbar-end">
-    <% if (typeof user !== 'undefined') { %>
-    <p class="navbar-item"><%= user.username %></p>
-    <% } %>
-    <!-- routes -->
-    <% if (typeof routes !== 'undefined') { %> <% routes.forEach((route) => { %>
-    <a class="navbar-item" href="<%= route.href %>"> <%= route.title %> </a>
-    <% }) %> <% } %>
-    <br />
     <div class="search">
         <form method="POST" action="/movies/s">
             <input type="text" name="search"  placeholder="Search" class="searchengine">
-            <input type="submit" value="Search" class="searchBtn">
-         </form>
+            <button type="submit" class="searchBtn"> </button>
+            <!-- <input type="submit" value="Search" class="searchBtn"> -->
+        </form>
     </div>
-</div>
+    <div class="nav-menu">
+        <% if (typeof user !== 'undefined') { %>
+        <p class="navbar-item"><%= user.username %></p>
+        <% } %>
+        <!-- routes -->
+         <% if (typeof routes !== 'undefined') { %> <% routes.forEach((route) => { %>
+        <a class="nav-item" href="<%= route.href %>"> <%= route.title %> </a>
+        <% }) %> <% } %>
+        <br />
+    </div>
 </nav>

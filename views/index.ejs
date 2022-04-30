@@ -2,18 +2,19 @@
 <html lang="en">
     <%- include('partials/head.ejs') %>
 <body>
-    <%- include('partials/nav.ejs') %>  
     <header>
         <h1>Movie Home Page </h1>
     </header>
+    <div >
+        <%- include('partials/nav.ejs') %>   
+    </div>
     <br>
-    
     <div class="container">
         <% for(let i=0; i<movies.length; i++){ %>
             <% const movie = movies[i] %>
             <a href="/movies/<%=movie._id%>" class="index">
             <div class="column">
-                <h2><%=movie.title%></h2>
+                <h2 class="movieTitle"><%=movie.title%></h2>
                 <img class="index pic" src="<%=movie.image%>" alt="<%=movie.title%>">
             </div>
             </a>

@@ -2,24 +2,32 @@
 <html lang="en">
     <%- include('../partials/head.ejs') %>
 <body>
-    <a href="/movies">Home</a>
-    <h1>Register New User</h1>
-    <form method="POST" action="/register">
-        <div>
-            <label for="email"> Email: </label>
-            <input name="email" placeholder="example@domain.com"/>
-        </div>
-        <div>
-            <label for="username"> Username : </label>
+    <header>
+        <h1>Register New User</h1>
+    </header>
+    <div class="register-home link">
+        <a href="/movies">Back to Home Page</a>
+    </div>
+    <form method="POST" action="/register" class="registerForm">
+        <div class="Uname">
+            <label for="username">Your name </label>
+            <br />
             <input name="username" type="text" />
         </div>
         <br />
-        <div>
-            <label for="password"> Password : </label>
+        <div class="email">
+            <label for="email"> Email </label>
+            <br />
+            <input name="email" placeholder="example@domain.com"/>
+        </div>
+        <br />
+        <div class="password">
+            <label for="password"> Password </label>
+            <br />
             <input name="password" type="password" minlength="8"/>
         </div>
         <br />
-        <div>
+        <div class="create">
             <input type="submit" value="Register">
         </div>
     </form>

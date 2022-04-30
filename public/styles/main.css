@@ -1,12 +1,309 @@
+*{
+    margin: 0px auto;
+    width: 0px auto;
+    box-sizing: border-box;
+}
+
+/* ------ body style--------- */
 body {
     display: flex;
     flex-direction: column;
     background-color:  grey;
     margin: 0 auto;
     width: 0 auto;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-image: url('https://media3.giphy.com/media/l2v1YQMVH8rEAstMyK/giphy.gif?cid=ecf05e47hrmpybzzlbla5jf1cwcaahh6m7goz1dz2k21a3km&rid=giphy.gif&ct=g');
 }
 
+/* ----- header tag------- */
+header{
+    text-align: center;
+    font-size: larger;
+    color:yellow;
+    margin-top: 20px;
+    padding: 0px;
+}
+
+/* ------ title pages------- */
+.movieTitle{
+    font-size: 20px;
+    color:whitesmoke;
+}
+
+/* ------ search------- */
+.search {
+    position: absolute;
+    right:50px;
+}
+
+.search .searchengine{
+    border: 1px solid grey;
+    cursor:pointer;
+    font-size:20px;
+    padding:10px;
+    width :330px;
+    border-right: none;
+}
+
+/* ----search hover---- */
+.search .searchBtn:hover{
+    background:lightcyan;
+} 
+
+.search .searchBtn {
+    padding: 20px;
+    background:white;
+    border: 1px solid grey;
+    color: white;
+    cursor:pointer;
+    border-radius: 40px;
+    position: relative;
+    margin-left: -39px;
+   
+}
+
+/* ------- serarch -index---- */
+
+.index-nav {
+    font-size: 40px;
+    text-decoration: none;
+    color:whitesmoke;
+    position: absolute;
+    left:50px;
+    margin-top: 30px;
+}
+/* ---- nav- bar---- */
+.nav-menu{
+    font-size: 25px;
+    text-decoration: none;
+    position: absolute;
+    left:50px;
+    margin-bottom: 40px;
+}
+
+/* ---nav p tag------ */
+nav p {
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    height: 30px;
+    margin-top: 20px 20px 20px 30px;
+}
+
+/* ----nav a tag---- */
+.nav-item a {
+    display: flex;
+    flex-direction: row;
+    font-size: 30px;
+    height: 30px;
+    margin-top: 20px 20px 20px 30px;
+    text-decoration: none;
+}
+
+/* ----nav item --- */
+.nav-item {
+    font-size: 40px;
+    text-decoration: none;
+    color:whitesmoke;
+}
+
+/* ------nav a hover-------- */
+nav a:hover {
+    background-color:black;
+}
+
+/* ------- nav div-------*/
+nav a div {
+    color: black;
+}
+
+/* -------register home-- */
+.register-home {
+    font-size: 40px;
+    text-decoration: none;
+    color:whitesmoke;
+    position: absolute;
+    left:50px;
+    margin-top: 60px;
+}
+
+/* -------register page a link -- */
+.register-home a{
+    text-decoration: none;
+    color:white; 
+}
+
+/* ------- Register form-------- */
+.registerForm{
+    margin-top: 80px;
+    position: center;
+    left:60px;
+}
+
+/* -------- register form label------- */
+.registerForm .Uname{
+    font-size: 25px;
+}
+
+/* ---------- register form input------*/
+.registerForm .Uname input{
+    font-size: 25px;
+    width: 300px;
+}
+
+/* -------- register form label------- */
+.registerForm .email{
+    font-size: 25px;
+}
+
+/* ---------- register form email------*/
+.registerForm .email input{
+    font-size: 25px;
+    width: 300px;
+}
+
+/* -------- register form password------- */
+.registerForm .password{
+    font-size: 25px;
+}
+
+/* ---------- register form password------*/
+.registerForm .password input{
+    font-size: 25px;
+    width: 300px;
+}
+
+/* ---------- register form input------*/
+.registerForm .create input{
+    font-size: 25px;
+    width: 300px;
+    border-radius: 10px;
+    background-color:gold;
+}
+
+/* --------sign in home page link ------ */
+.signin-home {
+    font-size: 40px;
+    text-decoration: none;
+    color:whitesmoke;
+    position: absolute;
+    left:50px;
+    margin-top: 60px;
+}
+
+/* -------sign in page a link ----- */
+.signin-home a{
+    text-decoration: none;
+    color:white; 
+}
+
+/* ------- signin form-------- */
+.signinForm{
+    margin-top: 80px;
+    position: center;
+    left:60px;
+}
+
+/* -------- sign in form label------- */
+.signinForm .Uname{
+    font-size: 25px;
+}
+
+/* ---------- sign in form input------*/
+.signinForm .Uname input{
+    font-size: 25px;
+    width: 300px;
+}
+
+/* -------- sign in label------- */
+.signinForm .email{
+    font-size: 25px;
+}
+
+/* ---------- sign in form email------*/
+.signinForm .email input{
+    font-size: 25px;
+    width: 300px;
+}
+
+/* -------- register form password------- */
+.signinForm .password{
+    font-size: 25px;
+}
+
+/* ----------sign in password------*/
+.signinForm .password input{
+    font-size: 25px;
+    width: 300px;
+}
+
+/* ---------- sign in submit------*/
+.signinForm .submitSignin {
+    font-size: 25px;
+    width: 300px;
+    border-radius: 20px;
+    background-color:gold;
+}
+
+/* ---------- sign in input------*/
+.signinForm a .createaccoutBtn{
+    font-size: 25px;
+    width: 300px;
+    border-radius: 10px;
+    background-color:gold;
+}
+
+/* --------Search page ------------- */
+.results-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 100px; 
+    margin-bottom: 10px;
+}
+
+/* -------- search movie div  ------- */
+
+.results-container .movies {
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* --------Search page ------------*/
+.results-container .movie .searchTitle {
+    margin-top: 50px;
+    font-size: 50px;
+    display: flex;   
+}
+
+.results-container .movie .movie-title{
+    font-size: 30px;
+}
+
+/* --------search movie div a tag------------*/
+.results-container .movie .movie-title a{
+    text-decoration: none;
+}
+
+
+/* --------search movie div p tag------------*/
+.results-container .movie p{
+    font-size: 30px;
+    color: blue;
+}
+
+
+/* ------------show nav------ */
+
+#searchPage{
+    position: absolute;
+    right:50px;
+}
+
+
+/*-----   */
 .row {
     display: flex;
     flex-direction: row;
@@ -22,14 +319,9 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 75px;
 }
-header{
-    text-align: center;
-    font-size: larger;
-    color:yellow;
-    margin-top: 10px;
-    padding: 0px;
-}
+
 
 h2 {
     margin: 0 auto;
@@ -43,45 +335,13 @@ p {
     margin: 0 auto;
 }
 
-nav {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    height: 30px;
-    margin-top: 40px;
-}
-
 /* nav a{
     text-align: center;
     text-decoration: none;
 } */
 
-nav a:hover {
-    background-color: lightblue;
-}
 
-nav a div {
-    color: black;
-   
-}
 
-.search{
-    margin-left: 100px;
-    margin-right: 100px;
-}
-
-.search .searchengine{
-    border: 2px solid grey;
-    cursor:pointer;
-    font-size:20px;
-    padding:10px;
-    width :250px;
-}
-
-.search .searchBtn{
-    width:100px;
-    font-size: 15px;
-}
 
 .show {
     color: white;

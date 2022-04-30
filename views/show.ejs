@@ -38,8 +38,9 @@
                         <h3>Rating: <%=reviews[i].rating%></h3>
                         <p><%=reviews[i].comment%></p>
                     <div class="row">
-                        <a href="/reviews/<%=reviews[i]._id%>/edit"><button class="editBtn">Edit Review</button> </a>
+                        <a href="/reviews/<%=reviews[i]._id%>/edit"><button class="editBtn">Edit Review</button></a>
                         <form method="POST" action="/reviews/<%= reviews[i]._id %>?_method=DELETE">
+                            <input type="hidden" name="movieId" value="<%=movie._id%>">
                             <input type="submit" value="Delete Review" class="deleteBtn">
                         </form>
                     </div>

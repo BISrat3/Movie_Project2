@@ -36,7 +36,7 @@ header{
     right:50px;
 }
 
-.search .searchengine{
+.search .searchengine {
     border: 1px solid grey;
     cursor:pointer;
     font-size:20px;
@@ -54,15 +54,18 @@ header{
     padding: 20px;
     background:white;
     border: 1px solid grey;
-    color: white;
     cursor:pointer;
     border-radius: 40px;
     position: relative;
     margin-left: -39px;
-   
+
 }
 
-/* ------- serarch -index---- */
+.search .searchBtn input{
+    color: black;
+    font-size: 30px;
+}
+/* ------- search- for search ejs---- */
 
 .index-nav {
     font-size: 40px;

@@ -105,7 +105,6 @@ nav a:hover {
 /* ------- nav div-------*/
 nav a div {
     color: black;
-   
 }
 
 /* -------register home-- */
@@ -168,9 +167,82 @@ nav a div {
 .registerForm .create input{
     font-size: 25px;
     width: 300px;
-    border-radius: 2px solid yellow;
+    border-radius: 10px;
     background-color:gold;
 }
+
+/* --------sign in home page link ------ */
+.signin-home {
+    font-size: 40px;
+    text-decoration: none;
+    color:whitesmoke;
+    position: absolute;
+    left:50px;
+    margin-top: 60px;
+}
+
+/* -------sign in page a link ----- */
+.signin-home a{
+    text-decoration: none;
+    color:white; 
+}
+
+/* ------- signin form-------- */
+.signinForm{
+    margin-top: 80px;
+    position: center;
+    left:60px;
+}
+
+/* -------- sign in form label------- */
+.signinForm .Uname{
+    font-size: 25px;
+}
+
+/* ---------- sign in form input------*/
+.signinForm .Uname input{
+    font-size: 25px;
+    width: 300px;
+}
+
+/* -------- sign in label------- */
+.signinForm .email{
+    font-size: 25px;
+}
+
+/* ---------- sign in form email------*/
+.signinForm .email input{
+    font-size: 25px;
+    width: 300px;
+}
+
+/* -------- register form password------- */
+.signinForm .password{
+    font-size: 25px;
+}
+
+/* ----------sign in password------*/
+.signinForm .password input{
+    font-size: 25px;
+    width: 300px;
+}
+
+/* ---------- sign in submit------*/
+.signinForm .submitSignin {
+    font-size: 25px;
+    width: 300px;
+    border-radius: 20px;
+    background-color:gold;
+}
+
+/* ---------- sign in input------*/
+.signinForm a .createaccoutBtn{
+    font-size: 25px;
+    width: 300px;
+    border-radius: 10px;
+    background-color:gold;
+}
+
 /*-----   */
 .row {
     display: flex;

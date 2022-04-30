@@ -243,6 +243,56 @@ nav a div {
     background-color:gold;
 }
 
+/* --------Search page ------------- */
+.results-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 100px; 
+    margin-bottom: 10px;
+}
+
+/* -------- search movie div  ------- */
+
+.results-container .movies {
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* --------Search page ------------*/
+.results-container .movie .searchTitle {
+    margin-top: 50px;
+    font-size: 50px;
+    display: flex;   
+}
+
+.results-container .movie .movie-title{
+    font-size: 30px;
+}
+
+/* --------search movie div a tag------------*/
+.results-container .movie .movie-title a{
+    text-decoration: none;
+}
+
+
+/* --------search movie div p tag------------*/
+.results-container .movie p{
+    font-size: 30px;
+    color: blue;
+}
+
+
+/* ------------show nav------ */
+
+#searchPage{
+    position: absolute;
+    right:50px;
+}
+
+
 /*-----   */
 .row {
     display: flex;

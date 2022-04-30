@@ -1,14 +1,15 @@
 <nav>
-    <div class="search">
+    <div class="search" id="searchPage">
         <form method="POST" action="/movies/s">
-            <input type="text" name="search"  placeholder="Search" class="searchengine">
-            <button type="submit" class="searchBtn"> </button>
+            <input type="text" name="search"  placeholder="Search" class="searchengine" id="searchShowNav" require>
+            <button type="submit" class="searchBtn" id="shownav"> </button>
             <!-- <input type="submit" value="Search" class="searchBtn"> -->
         </form>
     </div>
     <div class="nav-menu">
         <% if (typeof user !== 'undefined') { %>
         <p class="navbar-item"><%= user.username %></p>
+        <br />
         <% } %>
         <!-- routes -->
          <% if (typeof routes !== 'undefined') { %> <% routes.forEach((route) => { %>

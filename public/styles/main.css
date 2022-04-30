@@ -32,11 +32,8 @@ header{
 
 /* ------ search------- */
 .search {
-    margin-left: 100px;
-    margin-right: 400px;
-    width: 400px;
-    display: flex;
-    justify-content:end;
+    position: absolute;
+    right:50px;
 }
 
 .search .searchengine{
@@ -44,53 +41,137 @@ header{
     cursor:pointer;
     font-size:20px;
     padding:10px;
-    width :300px;
+    width :330px;
+    border-right: none;
 }
 
+/* ----search hover---- */
+.search .searchBtn:hover{
+    background:lightcyan;
+} 
+
 .search .searchBtn {
-    width:30px;
     padding: 20px;
     background:white;
     border: 1px solid grey;
     color: white;
     cursor:pointer;
     border-radius: 40px;
-    
+    position: relative;
+    margin-left: -39px;
+   
 }
 
 /* ---- nav- bar---- */
 .nav-menu{
     font-size: 25px;
     text-decoration: none;
+    position: absolute;
+    left:50px;
+    margin-bottom: 40px;
 }
+
+/* ---nav p tag------ */
 nav p {
     display: flex;
     flex-direction: row;
     font-size: 20px;
-    /* align-items: center; */
     height: 30px;
     margin-top: 20px 20px 20px 30px;
-
 }
 
+/* ----nav a tag---- */
 .nav-item a {
     display: flex;
     flex-direction: row;
     font-size: 30px;
-    /* align-items: center; */
     height: 30px;
     margin-top: 20px 20px 20px 30px;
     text-decoration: none;
 }
 
+/* ----nav item --- */
 .nav-item {
     font-size: 40px;
     text-decoration: none;
     color:whitesmoke;
 }
-.search .searchBtn:hover{
-    background:lightcyan;
-} 
+
+/* ------nav a hover-------- */
+nav a:hover {
+    background-color:black;
+}
+
+/* ------- nav div-------*/
+nav a div {
+    color: black;
+   
+}
+
+/* -------register home-- */
+.register-home {
+    font-size: 40px;
+    text-decoration: none;
+    color:whitesmoke;
+    position: absolute;
+    left:50px;
+    margin-top: 60px;
+}
+
+/* -------register page a link -- */
+.register-home a{
+    text-decoration: none;
+    color:white; 
+}
+
+/* ------- Register form-------- */
+.registerForm{
+    margin-top: 80px;
+    position: center;
+    left:60px;
+}
+
+/* -------- register form label------- */
+.registerForm .Uname{
+    font-size: 25px;
+}
+
+/* ---------- register form input------*/
+.registerForm .Uname input{
+    font-size: 25px;
+    width: 300px;
+}
+
+/* -------- register form label------- */
+.registerForm .email{
+    font-size: 25px;
+}
+
+/* ---------- register form email------*/
+.registerForm .email input{
+    font-size: 25px;
+    width: 300px;
+}
+
+/* -------- register form password------- */
+.registerForm .password{
+    font-size: 25px;
+}
+
+/* ---------- register form password------*/
+.registerForm .password input{
+    font-size: 25px;
+    width: 300px;
+}
+
+/* ---------- register form input------*/
+.registerForm .create input{
+    font-size: 25px;
+    width: 300px;
+    border-radius: 2px solid yellow;
+    background-color:gold;
+}
+/*-----   */
 .row {
     display: flex;
     flex-direction: row;
@@ -106,7 +187,9 @@ nav p {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 45px;
 }
+
 
 h2 {
     margin: 0 auto;
@@ -126,14 +209,6 @@ p {
 } */
 
 
-nav a:hover {
-    background-color:black;
-}
-
-nav a div {
-    color: black;
-   
-}
 
 
 .show {

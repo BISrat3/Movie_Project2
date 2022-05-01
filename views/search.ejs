@@ -7,19 +7,15 @@
         <h1>Search for a New Movie</h1>   
     </header>
     <br />
-    <div class="results-container">
+    <div class="container">
         <% for(let i=0; i<movieData.Search.length; i++){ %>
             <% const movie = movieData.Search[i] %>
-            <div class="movie">
-                <h2 class="movie-title">
-                    <a href="/movies/s/<%=movie.imdbID%>" ><%=movie.Title%></a>
-                </h2>
-                <p><%=movie.imdbID%></p>
-                <p class="movie-year"><%=movie.Year%></p>
-                <div class="poster-frame">
-                    <img class="movie-poster" src="<%=movie.Poster%>" alt="<%=movie.Title%>">
+            <a href="/movies/s/<%=movie.imdbID%>" class="index">
+                <div class="column">
+                    <h2 class="movieTitle"><%=movie.Title%></h2>
+                    <img class="index pic" src="<%=movie.Poster%>" alt="<%=movie.Title%>">
                 </div>
-            </div>
+            </a>
         <% } %>
     </div>
 </body>

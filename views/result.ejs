@@ -6,21 +6,26 @@
     <header>
         <h1><%=imdbData.title%></h1>
     </header>
-    <img class="pic" src="<%=imdbData.image%>" alt="">
-    <p><%=imdbData.releaseDate%></p>
-    <p><%=imdbData.year%></p>
-    <p><%=imdbData.plot%></p>
-    <p><%=imdbData.genres%></p>
-    <p><%=imdbData.directors%></p>
-    <p><%=imdbData.stars%></p>
-    <p><%=imdbData.companies%></p>
-    <p><%=imdbData.tagline%></p>
-    <p><%=imdbData.runtimeMins%></p>
-    <p><%=imdbData.runtimeStr%></p>
-    <p><%=imdbData.awards%></p>
-    <p><%=imdbData.contentRating%></p>
-    <p><%=imdbData.imDbRating%></p>
-    <p><%=imdbData.metacriticRating%></p>
+    <br>
+    <p><%=imdbData.year%> | <%=imdbData.contentRating%> | <%=imdbData.runtimeStr%></p>
+    <br>
+    <div class="container">
+        <img class="show pic" src="<%=imdbData.image%>" alt="">
+        <div class="show column">
+            <h3><%=imdbData.tagline%></h3>
+            <p><%=imdbData.genres%></p>
+            <p><%=imdbData.plot%></p>
+            <br>
+            <p><%=imdbData.directors%></p>
+            <p><%=imdbData.writers%></p>
+            <p><%=imdbData.stars%></p>
+            <p><%=imdbData.releaseDate%></p>
+            <p><%=imdbData.companies%></p>
+            <p><%=imdbData.awards%></p>
+            <p><%=imdbData.imDbRating%></p>
+            <p><%=imdbData.metacriticRating%></p>
+        </div>
+    </div>
     <form method="POST" action="/movies">
         <div class="hidden">
             <input type="text" name="title" value="<%=imdbData.title%>">
@@ -41,7 +46,7 @@
             <input type="text" name="imDbRating" value="<%=imdbData.imDbRating%>">
             <input type="text" name="metacriticRating" value="<%=imdbData.metacriticRating%>">
         </div>
-        <h2>Similar</h2>
+        <h2>Similar Movies</h2>
         <div class="container">
             <% for(let i=0; i<imdbData.similars.length; i++){ %>
                 <a href="/movies/s/<%=imdbData.similars[i].id%>" class="index">

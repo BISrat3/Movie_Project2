@@ -4,12 +4,12 @@
    <%- include ('partials/head.ejs', { pageTitle: "edit movies"})%>
 </head>
 <body>
-    <header>
-        <h1>Edit Movie Page | <%= movie.title %> </h1>
-    </header>
     <nav class="nav-editMovie">
         <a href="/movies">Back to Home Page</a>
     </nav>
+    <header>
+        <h1>Edit Movie Page | <%= movie.title %> </h1>
+    </header>
     <form method="POST" action="/movies/<%=movie._id%>?_method=PUT" class="editMovie page">
         <div class="titleMovie">
             <label for="title">Movie Title</label>

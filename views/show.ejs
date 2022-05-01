@@ -2,10 +2,10 @@
 <html lang="en">
     <%- include('partials/head.ejs') %>
 <body>
+    <%- include('partials/nav.ejs') %>
     <header>
         <h1>Movie Title : <%=movie.title%></h1>
     </header>
-    <%- include('partials/nav.ejs') %>
     <br>
     <p><%=movie.year%> | <%=movie.contentRating%> | <%=movie.runtimeStr%></p>
     <br>

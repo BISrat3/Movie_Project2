@@ -31,6 +31,15 @@ app.use(methodOverride('_method'))
 // body-parser middleware
 app.use(express.urlencoded({ extended: false }))
 
+// Authentication middleware
+const authRequired = function (req, res, next) {
+    if (req.session.currentUser) {
+      return next();
+    }
+  
+    return res.redirect("/signin");
+  };
+
 // Application configuration
 app.use(
     session({
@@ -56,7 +65,7 @@ app.use(function (req, res, next){
 app.use('/movies', controllers.movies)
 
 // Reviews Router
-app.use('/reviews', controllers.reviews)
+app.use('/reviews', authRequired, controllers.reviews)
 
 // Users Router
 app.use('/', controllers.users)

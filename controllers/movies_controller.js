@@ -6,7 +6,8 @@ const axios = require('axios');
 const router = express.Router()
 
 // Models - databases
-const db = require('../models')
+const db = require('../models');
+const { populate } = require('../models/Movie');
 
 // "Index" route
 router.get('/', async (req, res, next) =>{
@@ -62,7 +63,7 @@ router.get('/:id', async (req, res, next) => {
     try {
         const foundMovie = await db.Movie.findById(req.params.id)
         const reviews = await db.Review.find({product: req.params.id})
-        console.log(reviews.length, 'Reviews Found');
+        .populate('user')
         const context = {
             movie: foundMovie,
             reviews: reviews,

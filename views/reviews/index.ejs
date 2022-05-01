@@ -1,48 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
     <%- include('../partials/head.ejs') %>
-</head>
 <body>
+    <%- include('../partials/nav.ejs') %>
     <header>
         <h1>Review Index Page</h1>
     </header>
-    <%- include('../partials/nav.ejs') %>
     <div class="reviewIndex">
     <% for(let i=0; i<reviews.length; i++){ %>
         <% const review = reviews[i] %>
-        <strong class="reviewerName"> <%= review.user.username %> </strong>
-        <!-- <small> <%# new Date(review.createdAt).toLocaleString() %> </small> -->
-        <br />
-        <!-- create our stars -->
-        <% for( let index = 0; index < 5; index++ ) { %> 
-        <% if (review.rating > index) { %>
-        <span class="icon">
-            <i class="fas fa-star yellow">*</i>
-        </span>
-        <% } else { %>
+        <% if(user.username === review.user.username){ %>
+
+            <strong class="reviewerName"> <%= review.user.username %> </strong>
+            <!-- <small> <%# new Date(review.createdAt).toLocaleString() %> </small> -->
+            <br />
+            <!-- create our stars -->
+            <% for( let index = 0; index < 5; index++ ) { %> 
+            <% if (review.rating > index) { %>
             <span class="icon">
-                <i class="fas fa-star">-</i>
+                <i class="fas fa-star yellow">*</i>
             </span>
-        <% } %> <% } %>
-            <br />
-            <div class="reviewComment">
-                <%= review.comment %>
-            </div>
-            <br />
-            <a href="/movies/<%= review.movie._id %>"><%= review.movie.title %></a>
-            <br />
-            <div class="row">
+            <% } else { %>
+                <span class="icon">
+                    <i class="fas fa-star">-</i>
+                </span>
+            <% } %> <% } %>
                 <br />
-                <a href="/reviews/<%=reviews[i]._id%>/edit"><button class="editBtn">Edit Review</button></a>
-                <form method="POST" action="/reviews/<%= review._id %>?_method=DELETE">
-                    <input type="hidden" name="movieId" value="<%=review.movie._id%>">
-                    <input type="submit" value="Delete Review" class="deleteBtn">
-                </form>
+                <div class="reviewComment">
+                    <%= review.comment %>
+                </div>
                 <br />
-            </div>
-            <br />                      
-        <% } %> 
+                <a href="/movies/<%= review.movie._id %>"><%= review.movie.title %></a>
+                <br />
+                <div class="row">
+                    <br />
+                    <a href="/reviews/<%=reviews[i]._id%>/edit"><button class="editBtn">Edit Review</button></a>
+                    <form method="POST" action="/reviews/<%= review._id %>?_method=DELETE">
+                        <input type="hidden" name="movieId" value="<%=review.movie._id%>">
+                        <input type="submit" value="Delete Review" class="deleteBtn">
+                    </form>
+                    <br />
+                </div>
+                <br />                      
+            <% } %> 
+        <% } %>
     </div>
 </body>
 </html>

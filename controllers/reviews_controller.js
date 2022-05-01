@@ -61,7 +61,6 @@ router.post ('/', async (req, res, next) => {
                 return next();
             }
         })
-        console.log(newReview)
         // Return user to movie detail page
         res.redirect(`/reviews`)
     } catch (error) {

@@ -3,7 +3,9 @@
     <%- include('partials/head.ejs') %>
 <body>
     <%- include('partials/nav.ejs') %>
-    <h1><%=imdbData.title%></h1>
+    <header>
+        <h1><%=imdbData.title%></h1>
+    </header>
     <img class="pic" src="<%=imdbData.image%>" alt="">
     <p><%=imdbData.releaseDate%></p>
     <p><%=imdbData.year%></p>
@@ -40,19 +42,21 @@
             <input type="text" name="metacriticRating" value="<%=imdbData.metacriticRating%>">
         </div>
         <h2>Similar</h2>
-        <div>
+        <div class="container">
             <% for(let i=0; i<imdbData.similars.length; i++){ %>
-                <div>
-                    <h3><a href="/movies/s/<%=imdbData.similars[i].id%>"><%=imdbData.similars[i].title%></a></h3>
-                    <img class="pic-small" src="<%=imdbData.similars[i].image%>" alt="<%=imdbData.similars[i].title%>">
-                    <p><%=imdbData.imDbRating%></p>
-                    <div class="hidden">
-                        <input type="text" name="similars{id}[]" value="<%=imdbData.similars[i].id%>">
-                        <input type="text" name="similars{title}[]" value="<%=imdbData.similars[i].title%>">
-                        <input type="text" name="similars{image}[]" value="<%=imdbData.similars[i].image%>">
-                        <input type="text" name="similars{imDbRating}[]" value="<%=imdbData.similars[i].imDbRating%>">
+                <a href="/movies/s/<%=imdbData.similars[i].id%>" class="index">
+                    <div class="column">
+                        <h3 class="movieTitle"><%=imdbData.similars[i].title%></h3>
+                        <img class="index pic" src="<%=imdbData.similars[i].image%>" alt="<%=imdbData.similars[i].title%>">
+                        <h2><%=imdbData.imDbRating%></h2>
                     </div>
-                </div>
+                </a>
+                    <div class="hidden">
+                        <input type="text" name="similarsId" value="<%=imdbData.similars[i].id%>">
+                        <input type="text" name="similarsTitle" value="<%=imdbData.similars[i].title%>">
+                        <input type="text" name="similarsImage" value="<%=imdbData.similars[i].image%>">
+                        <input type="text" name="similarsImDbRating" value="<%=imdbData.similars[i].imDbRating%>">
+                    </div>
             <% } %>
         </div>
         <input type="submit" value="Add Movie To MongoDB">

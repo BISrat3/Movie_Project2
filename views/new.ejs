@@ -3,44 +3,55 @@
     <%- include('partials/head.ejs') %>
 <body>
     <%- include('partials/nav.ejs') %>  
-    <h1>New Movie Page</h1>
-    <form method="POST" action="/movies">
-        <div>
-            <label for="title">Movie Title:</label>
+    <header>
+        <h1>Create New Movie </h1>
+    </header>
+    <form method="POST" action="/movies" class="createMovie page">
+        <div class="create">
+            <label for="title">Movie Title</label>
+            <br />
             <input type="text" name="title" id=""> 
         </div>
         <br />
-        <div>
-            <label for="image">Movie Image:</label>
+        <div class="create">
+            <label for="image">Movie Image</label>
+            <br />
             <input type="text" name="image" id="">
         </div>
         <br />
-        <div>
-            <label for="releaseDate">Release Date:</label>
+        <div class="create">
+            <label for="releaseDate">Release Date</label>
+            <br />
             <input type="text" name="releaseDate" id="">
         </div>
         <br />
-        <div>
-            <label for="plot">Plot: </label>
+        <div class="create">
+            <label for="plot">Plot</label>
+            <br />
             <input type="text" name="plot" id="">
         </div>
         <br />
-        <div>
-            <label for="year">Year:</label>
+        <div class="create">
+            <label for="year">Year</label>
+            <br />
             <input type="number" name="year" id="">
         </div>
         <br />
-        <div>
-            <label for="director">Director :</label>
+        <div class="create">
+            <label for="director">Director </label>
+            <br />
             <input type="text" name="director" id="">
         </div>
         <br />
-        <div>
-            <label for="stars">Stars : </label>
+        <div class="create">
+            <label for="stars">Stars </label>
+            <br />
             <input type="text" name="stars" id=""> 
         </div>
-        <br />
-        <input type="submit" id="" value="Create New Movie">
+        <div class="createBtn">
+            <br />
+            <input type="submit" id="" value="Create New Movie">
+        </div>
     </form>
 </body>
 </html>

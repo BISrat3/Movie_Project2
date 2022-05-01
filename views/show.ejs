@@ -50,6 +50,7 @@
                 <% } %>
             <% } %>
         </div>
+    </div>
         <div class="container">
             <% if (movie.similarsId !== null) { %>
                 <% for(let i=0; i<movie.similarsId.length; i++){ %>
@@ -57,13 +58,12 @@
                     <div class="column">
                             <h3 class="movieTitle"><%=movie.similarsTitle[i]%></h3>
                             <img class="index pic" src="<%=movie.similarsImage[i]%>" alt="<%=movie.similarsTitle[i]%>">
-                            <p><%=movie.similarsImDbRating[i]%></p>
+                            <h2><%=movie.similarsImDbRating[i]%></h2>
                         </div>
                     </a>
                 <% } %>
             <% } %>
         </div>
-    </div>
 
 </body>
 </html>

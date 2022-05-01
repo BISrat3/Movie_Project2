@@ -65,7 +65,6 @@ header{
 }
 
 /* ------- search- for search ejs---- */
-
 .index-nav {
     font-size: 40px;
     text-decoration: none;
@@ -74,6 +73,7 @@ header{
     left:50px;
     margin-top: 30px;
 }
+
 /* ---- nav- bar---- */
 .nav-menu{
     font-size: 25px;
@@ -100,6 +100,7 @@ nav p {
     text-decoration: none;
 }
 
+/* ----nav a tag---- */
 .nav-menu .nav-item a {
     margin: 10px 20px 20px 40px;
 }
@@ -124,12 +125,39 @@ nav a div {
 /* ------- Register form-------- */
 .createMovie{
     margin-top: 80px;
+}
+/* -----edit Movie Page nav----  */
+.nav-editMovie{
+    font-size: 40px;
+    text-decoration: none;
+    color:whitesmoke;
+    position: absolute;
+    left:50px;
+    margin-top: 60px;
+}
+
+/* -----edit Movie Page nav a tag----  */
+.nav-editMovie a {
+    text-decoration: none;
+    color:whitesmoke;
+}
+
+/* -----edit Movie Page----  */
+.editMovie{
+    margin-top: 60px;
     position: center;
     left:60px;
 }
 
 /* --------New Movie create Image------- */
-.createMovie .createTitle input{
+
+/* -------- Edit Movie title------- */
+.editMovie .titleMovie{
+    font-size: 25px;
+}
+
+/* --------Edit Movie title input------*/
+.editMovie .titleMovie input{
     font-size: 25px;
     width: 500px;
 }
@@ -141,6 +169,12 @@ nav a div {
 
 /* --------New Movie create Image------- */
 .createMovie .createImage input{
+/* -------- Edit Movie title image------ */
+    font-size: 25px;
+}
+
+/* ---------Edit Movie title input-----*/
+.editMovie .movieImg input{
     font-size: 25px;
     width: 500px;
 }
@@ -151,7 +185,13 @@ nav a div {
 }
 
 /* --------New Movie create Release------- */
-.createMovie .createRelease input{
+/* --------Edit Movie release----- */
+.editMovie .release{
+    font-size: 25px;
+}
+
+/* ---------Edit Movie release input-----*/
+.editMovie .release input{
     font-size: 25px;
     width: 500px;
 }
@@ -207,7 +247,8 @@ nav a div {
 }
 
 /* ---------- New Movie create button------*/
-.createMovie .createBtn input{
+/* ---------- Edit Movie edit button------*/
+.editMovie .editBtn input{
     font-size: 25px;
     width: 500px;
     border-radius: 10px;
@@ -215,6 +256,8 @@ nav a div {
 }
 
 /* -------register home-- */
+
+/* -------register home--------------- */
 .register-home {
     font-size: 40px;
     text-decoration: none;
@@ -301,7 +344,7 @@ nav a div {
     left:60px;
 }
 
-/* -------- sign in form label------- */
+/* -------- sign in form User name------- */
 .signinForm .Uname{
     font-size: 25px;
 }
@@ -312,7 +355,7 @@ nav a div {
     width: 300px;
 }
 
-/* -------- sign in label------- */
+/* -------- sign in form email------- */
 .signinForm .email{
     font-size: 25px;
 }
@@ -323,7 +366,7 @@ nav a div {
     width: 300px;
 }
 
-/* -------- register form password------- */
+/* -------- sign form password------- */
 .signinForm .password{
     font-size: 25px;
 }
@@ -342,7 +385,7 @@ nav a div {
     background-color:gold;
 }
 
-/* ---------- sign in input------*/
+/* ---------- sign in create account------*/
 .signinForm a .createaccoutBtn{
     font-size: 25px;
     width: 300px;

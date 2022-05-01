@@ -23,14 +23,10 @@ const movieSchema = new mongoose.Schema({
     contentRating: String,
     imDbRating: String,
     metacriticRating: String,
-    similars: [
-        {
-            id: String,
-            title: String,
-            image: String,
-            imDbRating: String
-        }
-    ]
+    similarsId: Array,
+    similarsTitle: Array,
+    similarsImage: Array,
+    similarsImDbRating: Array
 })
 
 // Models Movie Schema

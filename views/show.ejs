@@ -2,9 +2,11 @@
 <html lang="en">
     <%- include('partials/head.ejs') %>
 <body>
+    <header>
+        <h1>Movie Title : <%=movie.title%></h1>
+    </header>
     <%- include('partials/nav.ejs') %>
     <br>
-    <h1><%=movie.title%></h1>
     <p><%=movie.year%> | <%=movie.contentRating%> | <%=movie.runtimeStr%></p>
     <br>
     <div class="container">

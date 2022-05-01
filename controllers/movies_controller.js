@@ -79,9 +79,7 @@ router.get('/:id', async (req, res, next) => {
 // Post "New" route
 router.post('/', async (req, res, next) => {
     try {
-        console.log(req.body)
         const createMovie = await db.Movie.create(req.body)
-        console.log(createMovie)
         res.redirect('/movies')
     } catch (error) {
         console.log(error);
@@ -94,7 +92,6 @@ router.post('/', async (req, res, next) => {
 router.get('/:id/edit', async (req, res, next) => {
     try {
         const updateMovie = await db.Movie.findById(req.params.id)
-        console.log(updateMovie)
         return res.render('edit.ejs', {movie: updateMovie})
     } catch (error){
         console.log(error)

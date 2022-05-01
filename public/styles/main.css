@@ -122,6 +122,10 @@ nav a div {
     color: black;
 }
 
+/* ------- Register form-------- */
+.createMovie{
+    margin-top: 80px;
+}
 /* -----edit Movie Page nav----  */
 .nav-editMovie{
     font-size: 40px;
@@ -145,6 +149,8 @@ nav a div {
     left:60px;
 }
 
+/* --------New Movie create Image------- */
+
 /* -------- Edit Movie title------- */
 .editMovie .titleMovie{
     font-size: 25px;
@@ -156,8 +162,14 @@ nav a div {
     width: 500px;
 }
 
+/* --------New Movie create Image------- */
+.createMovie .createTitle{
+    font-size: 25px;
+}
+
+/* --------New Movie create Image------- */
+.createMovie .createImage input{
 /* -------- Edit Movie title image------ */
-.editMovie .movieImg{
     font-size: 25px;
 }
 
@@ -167,6 +179,12 @@ nav a div {
     width: 500px;
 }
 
+/* --------New Movie create Image------- */
+.createMovie .createImage{
+    font-size: 25px;
+}
+
+/* --------New Movie create Release------- */
 /* --------Edit Movie release----- */
 .editMovie .release{
     font-size: 25px;
@@ -178,6 +196,57 @@ nav a div {
     width: 500px;
 }
 
+/* --------New Movie create Release------- */
+.createMovie .createRelease{
+    font-size: 25px;
+}
+
+/* -------- New Movie create Plot----- */
+.createMovie .createPlot{
+    font-size: 25px;
+}
+
+/* ---------New Movie create Plot-------*/
+.createMovie .createPlot input{
+    font-size: 25px;
+    width: 500px;
+}
+
+/* --------New Movie create Year------- */
+.createMovie .createYear{
+    font-size: 25px;
+}
+
+/* ----------New Movie create Year------*/
+.createMovie .createYear input{
+    font-size: 25px;
+    width: 500px;
+}
+
+
+/* -------- New Movie create Director------- */
+.createMovie .createDirector{
+    font-size: 25px;
+}
+
+/* ---------- New Movie create button-l------*/
+.createMovie .createDirector input{
+    font-size: 25px;
+    width: 500px;
+}
+
+/* -------- New Movie create Stars------- */
+.createMovie .createStars{
+    font-size: 25px;
+}
+
+/* ---------- New Movie create Stars------*/
+.createMovie .createStars input{
+    font-size: 25px;
+    width: 500px;
+}
+
+/* ---------- New Movie create button------*/
 /* ---------- Edit Movie edit button------*/
 .editMovie .editBtn input{
     font-size: 25px;
@@ -186,6 +255,7 @@ nav a div {
     background-color:gold;
 }
 
+/* -------register home-- */
 
 /* -------register home--------------- */
 .register-home {
@@ -412,7 +482,7 @@ nav a div {
 }
 
 
-/* ---------- register form input------*/
+/* ---------- Edit Review form input------*/
 .editReview .edit-review input{
     font-size: 25px;
     width: 300px;

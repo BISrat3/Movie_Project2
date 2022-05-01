@@ -36,6 +36,7 @@ header{
     right:50px;
 }
 
+/* -------search engine input---- */
 .search .searchengine {
     border: 1px solid grey;
     cursor:pointer;
@@ -43,28 +44,26 @@ header{
     padding:10px;
     width :330px;
     border-right: none;
+    height: 53px;
 }
 
 /* ----search hover---- */
-.search .searchBtn:hover{
+.search .searchBtn :hover{
     background:lightcyan;
 } 
 
 .search .searchBtn {
     padding: 20px;
     background:white;
-    border: 1px solid grey;
+    border: 5px solid blue;
     cursor:pointer;
     border-radius: 40px;
     position: relative;
-    margin-left: -39px;
-
+    margin-left: -5px;
+    font-size: 20px;
+    color:blue;
 }
 
-.search .searchBtn input{
-    color: black;
-    font-size: 30px;
-}
 /* ------- search- for search ejs---- */
 
 .index-nav {
@@ -98,16 +97,18 @@ nav p {
     display: flex;
     flex-direction: row;
     font-size: 30px;
-    height: 30px;
-    margin-top: 20px 20px 20px 30px;
     text-decoration: none;
 }
 
+.nav-menu .nav-item a {
+    margin: 10px 20px 20px 40px;
+}
 /* ----nav item --- */
 .nav-item {
-    font-size: 40px;
+    font-size: 30px;
     text-decoration: none;
     color:whitesmoke;
+    padding: 10px;
 }
 
 /* ------nav a hover-------- */
@@ -297,7 +298,6 @@ nav a div {
     color: blue;
 }
 
-
 /* ------------show nav------ */
 
 #searchPage{
@@ -305,12 +305,143 @@ nav a div {
     right:50px;
 }
 
+/* ------- edit review page------ */
+.editReview {
+    margin-top: 100px;
+    position: center;
+    left:60px;
+}
 
+/* -------- register form label------- */
+.editReview .rating {
+    font-size: 25px;
+}
+
+/* ---------- register form input------*/
+.editReview .rating input{
+    font-size: 25px;
+    width: 300px;
+}
+
+/* -------- register form label------- */
+.editReview .comment{
+    font-size: 25px;
+}
+
+/* ---------- register form email------*/
+.editReview .movieId input{
+    font-size: 25px;
+    width: 300px;
+}
+
+/* -------- register form label------- */
+.editReview .movieId{
+    font-size: 25px;
+}
+
+/* ---------- register form email------*/
+.editReview .comment input{
+    font-size: 25px;
+    width: 300px;
+}
+
+
+/* ---------- register form input------*/
+.editReview .edit-review input{
+    font-size: 25px;
+    width: 300px;
+    border-radius: 10px;
+    background-color:gold;
+}
+
+/* ------- New review page------ */
+.newReview {
+    margin-top: 100px;
+    position: center;
+    left:60px;
+}
+
+/* -------- New review page rating--- */
+.newReview .rating {
+    font-size: 25px;
+}
+
+/* -------- New review page input------*/
+.newReview .rating input{
+    font-size: 25px;
+    width: 300px;
+}
+
+/* -------- New review page comment------- */
+.newReview .comment{
+    font-size: 25px;
+}
+
+/* ---------- New review page comment------*/
+.newReview .comment input{
+    font-size: 25px;
+    width: 300px;
+}
+
+/* ---------New review page related movie--- */
+.newReview .relatedMovie label{
+    font-size: 25px;
+    width: 300px;
+}
+
+/* ---New review page related movie select-----*/
+.newReview .relatedMovie select{
+    font-size: 20px;
+    width: 300px;
+}
+
+/* ---New review page related movie select-----*/
+.newReview .createNew input{
+    font-size: 25px;
+    width: 300px;
+    border-radius: 10px;
+    background-color:gold;
+}
+
+/* ------- Index review page------ */
+.reviewIndex {
+    margin-top: 100px;
+    max-width: 400px;
+    left:100px;
+    margin-left: 40px;
+}
+
+/* ----Index review page a tag------ */
+.reviewIndex a {
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* ----Index review reviewer name-- */
+.reviewIndex .reviewerName {
+    font-size: 25px;
+
+}
+
+/* ----Index review page star icon-- */
+.reviewIndex .icon .fas{
+   color:yellow;
+   max-zoom: 30px;
+}
+
+.reviewIndex .icon i{
+   font-size: 20px;
+ }
+
+.reviewIndex .reviewComment{
+    font-size: 20px;
+}
 /*-----   */
 .row {
     display: flex;
     flex-direction: row;
 }
+
 
 .column {
     display: flex;
@@ -322,7 +453,7 @@ nav a div {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 75px;
+    margin-top: 85px;
 }
 
 
@@ -342,9 +473,6 @@ p {
     text-align: center;
     text-decoration: none;
 } */
-
-
-
 
 .show {
     color: white;

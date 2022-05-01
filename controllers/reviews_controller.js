@@ -54,7 +54,7 @@ router.post ('/', async (req, res, next) => {
             ...req.body,
             user: req.session.currentUser.id,
         }
-        const newReview = await db.Review.create(newReviewData, (error,newReviewData) => {
+        const newReview = await db.Review.create(newReviewData, (error,createdReview) => {
             if (error) {
                 console.log(error);
                 req.error = error;
@@ -63,7 +63,7 @@ router.post ('/', async (req, res, next) => {
         })
         console.log(newReview)
         // Return user to movie detail page
-        res.redirect(`/movies/${newReview.movie}`)
+        res.redirect(`/reviews`)
     } catch (error) {
         console.log(error);
         req.error = error;

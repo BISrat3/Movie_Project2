@@ -54,7 +54,7 @@ router.post ('/', async (req, res, next) => {
             ...req.body,
             user: req.session.currentUser.id,
         }
-        const newReview = await db.Review.create(newReviewData, (error,createdReview) => {
+        const newReview = await db.Review.create(newReviewData, (error,newReviewData) => {
             if (error) {
                 console.log(error);
                 req.error = error;

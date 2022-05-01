@@ -32,6 +32,7 @@
             <div class="row">
                 <a href="/reviews/<%=reviews[i]._id%>/edit"><button class="editBtn">Edit Review</button></a>
                 <form method="POST" action="/reviews/<%= review._id %>?_method=DELETE">
+                    <input type="hidden" name="movieId" value="<%=review.movie._id%>">
                     <input type="submit" value="Delete Review" class="deleteBtn">
                 </form>
             </div>

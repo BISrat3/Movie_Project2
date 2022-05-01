@@ -8,26 +8,30 @@
     <%- include('../partials/nav.ejs') %>
     <form method="POST" action="/reviews" class="newReview">
         <div class="rating">
-            <label for="rating"> Review Rating: </label>
+            <label for="rating"> Review Rating </label>
             <br />
             <input name="rating" type="number" />
         </div>
         <br />
         <div class="comment">
-            <label for="comment"> Review Comment: </label>
+            <label for="comment"> Review-Comment </label>
             <br />
             <input name="comment" type="text" />
         </div>
         <br />
-        <div>
-            <label for=""> Related Movie: </label>
+        <div class="relatedMovie">
+            <label for=""> Related Movie </label>
+            <br />
             <select name="movie" id="">
                 <% for(let i=0; i<movies.length; i++) { %>
                     <option value="<%=movies[i]._id%>"><%=movies[i].title%></option>
                 <% } %>
             </select>
         </div>
-        <input type="submit" value="Create new review">
+        <br />
+        <div class="createNew">
+            <input type="submit" value="Create new review">
+        </div>
     </form>
 </body>
 </html>

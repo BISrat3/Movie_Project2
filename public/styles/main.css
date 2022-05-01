@@ -354,6 +354,55 @@ nav a div {
     background-color:gold;
 }
 
+/* ------- New review page------ */
+.newReview {
+    margin-top: 100px;
+    position: center;
+    left:60px;
+}
+
+/* -------- New review page rating--- */
+.newReview .rating {
+    font-size: 25px;
+}
+
+/* -------- New review page input------*/
+.newReview .rating input{
+    font-size: 25px;
+    width: 300px;
+}
+
+/* -------- New review page comment------- */
+.newReview .comment{
+    font-size: 25px;
+}
+
+/* ---------- New review page comment------*/
+.newReview .comment input{
+    font-size: 25px;
+    width: 300px;
+}
+
+/* ---------New review page related movie--- */
+.newReview .relatedMovie label{
+    font-size: 25px;
+    width: 300px;
+}
+
+/* ---New review page related movie select-----*/
+.newReview .relatedMovie select{
+    font-size: 20px;
+    width: 300px;
+}
+
+/* ---New review page related movie select-----*/
+.newReview .createNew input{
+    font-size: 25px;
+    width: 300px;
+    border-radius: 10px;
+    background-color:gold;
+}
+
 /*-----   */
 .row {
     display: flex;

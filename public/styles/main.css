@@ -121,6 +121,99 @@ nav a div {
     color: black;
 }
 
+/* ------- Register form-------- */
+.createMovie{
+    margin-top: 80px;
+    position: center;
+    left:60px;
+}
+
+/* --------New Movie create Image------- */
+.createMovie .createTitle input{
+    font-size: 25px;
+    width: 500px;
+}
+
+/* --------New Movie create Image------- */
+.createMovie .createTitle{
+    font-size: 25px;
+}
+
+/* --------New Movie create Image------- */
+.createMovie .createImage input{
+    font-size: 25px;
+    width: 500px;
+}
+
+/* --------New Movie create Image------- */
+.createMovie .createImage{
+    font-size: 25px;
+}
+
+/* --------New Movie create Release------- */
+.createMovie .createRelease input{
+    font-size: 25px;
+    width: 500px;
+}
+
+/* --------New Movie create Release------- */
+.createMovie .createRelease{
+    font-size: 25px;
+}
+
+/* -------- New Movie create Plot----- */
+.createMovie .createPlot{
+    font-size: 25px;
+}
+
+/* ---------New Movie create Plot-------*/
+.createMovie .createPlot input{
+    font-size: 25px;
+    width: 500px;
+}
+
+/* --------New Movie create Year------- */
+.createMovie .createYear{
+    font-size: 25px;
+}
+
+/* ----------New Movie create Year------*/
+.createMovie .createYear input{
+    font-size: 25px;
+    width: 500px;
+}
+
+
+/* -------- New Movie create Director------- */
+.createMovie .createDirector{
+    font-size: 25px;
+}
+
+/* ---------- New Movie create button-l------*/
+.createMovie .createDirector input{
+    font-size: 25px;
+    width: 500px;
+}
+
+/* -------- New Movie create Stars------- */
+.createMovie .createStars{
+    font-size: 25px;
+}
+
+/* ---------- New Movie create Stars------*/
+.createMovie .createStars input{
+    font-size: 25px;
+    width: 500px;
+}
+
+/* ---------- New Movie create button------*/
+.createMovie .createBtn input{
+    font-size: 25px;
+    width: 500px;
+    border-radius: 10px;
+    background-color:gold;
+}
+
 /* -------register home-- */
 .register-home {
     font-size: 40px;
@@ -346,7 +439,7 @@ nav a div {
 }
 
 
-/* ---------- register form input------*/
+/* ---------- Edit Review form input------*/
 .editReview .edit-review input{
     font-size: 25px;
     width: 300px;

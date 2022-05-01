@@ -48,6 +48,17 @@
                 <% } %>
             <% } %>
         </div>
+        <div class=" show column">
+            <% if (movie.similarsId !== null) { %>
+                <% for(let i=0; i<movie.similarsId.length; i++){ %>
+                    <div>
+                        <h3><a href="/movies/s/<%=movie.similarsId[i]%>"><%=movie.similarsTitle[i]%></a></h3>
+                        <img class="pic-small" src="<%=movie.similarsImage[i]%>" alt="<%=movie.similarsTitle[i]%>">
+                        <p><%=movie.similarsImDbRating[i]%></p>
+                    </div>
+                <% } %>
+            <% } %>
+        </div>
     </div>
 
 </body>

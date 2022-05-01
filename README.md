@@ -48,7 +48,8 @@ Allows users to search movies using APIs.
 - User session object
 
 ## Wireframes
-<img width="1189" alt="Screen Shot 2022-05-01 at 2 17 28 PM" src="https://user-images.githubusercontent.com/99110345/166159091-bc04344c-aadb-4fbd-a440-70246c55df90.png">
+
+<img width="854" alt="Screen Shot 2022-05-01 at 7 41 20 PM" src="https://user-images.githubusercontent.com/99110345/166169379-0141f2e4-e78e-4d30-aeca-07d6f4b119fc.png">
 
 
 

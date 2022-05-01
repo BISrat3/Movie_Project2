@@ -1,10 +1,12 @@
 const routes = [
     { href: "/movies", title: "Movies" },
+    { href: "/reviews", title: "My Reviews" },
     { href: "/reviews/new", title: "New Review" },
-    { href: "/signout", title: "signout" },
+    { href: "/signout", title: "Sign Out" },
 ];
 
 const usersRoutes = [
+    { href: "/movies", title: "Movies" },
     { href: "/signin", title: "Sign In" },
     { href: "/register", title: "Register" },
 ];

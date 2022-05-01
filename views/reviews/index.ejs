@@ -1,25 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reviews Index</title>
+    <%- include('../partials/head.ejs') %>
 </head>
 <body>
+    <header>
+        <h1>Review Index Page</h1>
+    </header>
     <%- include('../partials/nav.ejs') %>
-    <h1>Review Index Page</h1>
+    <div class="reviewIndex">
     <% for(let i=0; i<reviews.length; i++){ %>
         <% const review = reviews[i] %>
-        <strong> <%= review.user.username %> </strong>
+        <strong class="reviewerName"> <%= review.user.username %> </strong>
         <!-- <small> <%# new Date(review.createdAt).toLocaleString() %> </small> -->
         <br />
         <!-- create our stars -->
-        
         <% for( let index = 0; index < 5; index++ ) { %> 
         <% if (review.rating > index) { %>
         <span class="icon">
-            <i class="fas fa-star yellow">o</i>
+            <i class="fas fa-star yellow">*</i>
         </span>
         <% } else { %>
             <span class="icon">
@@ -27,15 +26,23 @@
             </span>
         <% } %> <% } %>
             <br />
-            <%= review.comment %>
+            <div class="reviewComment">
+                <%= review.comment %>
+            </div>
+            <br />
             <a href="/movies/<%= review.movie._id %>"><%= review.movie.title %></a>
+            <br />
             <div class="row">
+                <br />
                 <a href="/reviews/<%=reviews[i]._id%>/edit"><button class="editBtn">Edit Review</button></a>
                 <form method="POST" action="/reviews/<%= review._id %>?_method=DELETE">
+                    <input type="hidden" name="movieId" value="<%=review.movie._id%>">
                     <input type="submit" value="Delete Review" class="deleteBtn">
                 </form>
+                <br />
             </div>
-                                    
+            <br />                      
         <% } %> 
+    </div>
 </body>
 </html>

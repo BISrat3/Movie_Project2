@@ -305,7 +305,55 @@ nav a div {
     right:50px;
 }
 
-/* ------- */
+/* ------- edit review page------ */
+.editReview {
+    margin-top: 100px;
+    position: center;
+    left:60px;
+}
+
+/* -------- register form label------- */
+.editReview .rating {
+    font-size: 25px;
+}
+
+/* ---------- register form input------*/
+.editReview .rating input{
+    font-size: 25px;
+    width: 300px;
+}
+
+/* -------- register form label------- */
+.editReview .comment{
+    font-size: 25px;
+}
+
+/* ---------- register form email------*/
+.editReview .movieId input{
+    font-size: 25px;
+    width: 300px;
+}
+
+/* -------- register form label------- */
+.editReview .movieId{
+    font-size: 25px;
+}
+
+/* ---------- register form email------*/
+.editReview .comment input{
+    font-size: 25px;
+    width: 300px;
+}
+
+
+/* ---------- register form input------*/
+.editReview .edit-review input{
+    font-size: 25px;
+    width: 300px;
+    border-radius: 10px;
+    background-color:gold;
+}
+
 /*-----   */
 .row {
     display: flex;

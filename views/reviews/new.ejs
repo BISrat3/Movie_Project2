@@ -2,17 +2,23 @@
 <html lang="en">
     <%- include('../partials/head.ejs') %>
 <body>
+    <header>
+        <h1>New Review</h1>
+    </header>
     <%- include('../partials/nav.ejs') %>
-    <h1>New Review</h1>
-    <form method="POST" action="/reviews">
-        <div>
+    <form method="POST" action="/reviews" class="newReview">
+        <div class="rating">
             <label for="rating"> Review Rating: </label>
+            <br />
             <input name="rating" type="number" />
         </div>
-        <div>
+        <br />
+        <div class="comment">
             <label for="comment"> Review Comment: </label>
+            <br />
             <input name="comment" type="text" />
         </div>
+        <br />
         <div>
             <label for=""> Related Movie: </label>
             <select name="movie" id="">

@@ -2,19 +2,30 @@
 <html lang="en">
     <%- include('../partials/head.ejs') %>
 <body>
+    <header>
+        <h1>Edit Review</h1>
+    </header>
     <%- include('../partials/nav.ejs') %>
-    <h1>Edit Review</h1>
-    <form method="POST" action="/reviews/<%=review._id%>?_method=PUT">
-        <div>
-            <label for="rating"> Review Rating: </label>
+    <form method="POST" action="/reviews/<%=review._id%>?_method=PUT" class="editReview">
+        <div class="rating">
+            <label for="rating"> Review Rating </label>
+            <br />
             <input id="rating" name="rating" type="number" value="<%=review.rating%>"/>
         </div>
-        <div>
-            <label for="comment"> Review Comment: </label>
+        <br />
+        <div class="comment">
+            <label for="comment"> Review Comment </label>
+            <br />
             <input id="comment" name="comment" type="string" value="<%=review.comment%>"/>
         </div>
-        <input type="hidden" name="movieId" value="<%=review.movie._id%>" id="">
-        <input type="submit" value="Edit review">
+        <br />
+        <div class="moveId">
+            <input type="hidden" name="movieId" value="<%=review.movie._id%>" id="">
+        </div>
+        <br />
+        <div class="edit-review">
+            <input type="submit" value="Edit review">
+        </div>  
     </form>
 </body>
 </html>

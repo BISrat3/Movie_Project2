@@ -20,7 +20,7 @@ header{
     text-align: center;
     font-size: larger;
     color:yellow;
-    margin-top: 20px;
+    margin-top: 100px;
     padding: 0px;
 }
 
@@ -162,29 +162,12 @@ nav a div {
     width: 500px;
 }
 
-/* --------New Movie create Image------- */
-.createMovie .createTitle{
-    font-size: 25px;
-}
-
-/* --------New Movie create Image------- */
-.createMovie .createImage input{
-/* -------- Edit Movie title image------ */
-    font-size: 25px;
-}
-
 /* ---------Edit Movie title input-----*/
 .editMovie .movieImg input{
     font-size: 25px;
     width: 500px;
 }
 
-/* --------New Movie create Image------- */
-.createMovie .createImage{
-    font-size: 25px;
-}
-
-/* --------New Movie create Release------- */
 /* --------Edit Movie release----- */
 .editMovie .release{
     font-size: 25px;
@@ -196,57 +179,6 @@ nav a div {
     width: 500px;
 }
 
-/* --------New Movie create Release------- */
-.createMovie .createRelease{
-    font-size: 25px;
-}
-
-/* -------- New Movie create Plot----- */
-.createMovie .createPlot{
-    font-size: 25px;
-}
-
-/* ---------New Movie create Plot-------*/
-.createMovie .createPlot input{
-    font-size: 25px;
-    width: 500px;
-}
-
-/* --------New Movie create Year------- */
-.createMovie .createYear{
-    font-size: 25px;
-}
-
-/* ----------New Movie create Year------*/
-.createMovie .createYear input{
-    font-size: 25px;
-    width: 500px;
-}
-
-
-/* -------- New Movie create Director------- */
-.createMovie .createDirector{
-    font-size: 25px;
-}
-
-/* ---------- New Movie create button-l------*/
-.createMovie .createDirector input{
-    font-size: 25px;
-    width: 500px;
-}
-
-/* -------- New Movie create Stars------- */
-.createMovie .createStars{
-    font-size: 25px;
-}
-
-/* ---------- New Movie create Stars------*/
-.createMovie .createStars input{
-    font-size: 25px;
-    width: 500px;
-}
-
-/* ---------- New Movie create button------*/
 /* ---------- Edit Movie edit button------*/
 .editMovie .editBtn input{
     font-size: 25px;
@@ -255,8 +187,23 @@ nav a div {
     background-color:gold;
 }
 
-/* -------register home-- */
+/* --------New Movie create Release------- */
+.createMovie .create label{
+    font-size: 25px;
+}
+/* --------New Movie create Image------- */
+.createMovie .create input{
+    font-size: 30px;
+    width: 500px;
+}
 
+/* --------New Movie create Image------- */
+.createMovie .createBtn input{
+    width: 500px;
+    border-radius: 10px;
+    background-color:gold;
+    font-size: 25px;
+}
 /* -------register home--------------- */
 .register-home {
     font-size: 40px;

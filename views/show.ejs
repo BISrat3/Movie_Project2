@@ -24,7 +24,7 @@
             <p><%=movie.awards%></p>
             <p><%=movie.imDbRating%></p>
             <p><%=movie.metacriticRating%></p>
-            <div class="row">
+            <div class="row hidden">
                 <form method="POST" action="/movies/<%= movie._id %>?_method=DELETE">
                     <input type="submit" value="Delete Movie" class="deleteBtn">
                 </form>
@@ -39,7 +39,8 @@
                 <div class="show column">
                         <h3>Rating: <%=reviews[i].rating%></h3>
                         <p><%=reviews[i].comment%></p>
-                    <div class="row">
+                        <p>by: <%=reviews[i].user.username%></p>
+                    <div class="row hidden">
                         <a href="/reviews/<%=reviews[i]._id%>/edit"><button class="editBtn">Edit Review</button></a>
                         <form method="POST" action="/reviews/<%= reviews[i]._id %>?_method=DELETE">
                             <input type="hidden" name="movieId" value="<%=movie._id%>">

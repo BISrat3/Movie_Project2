@@ -17,7 +17,6 @@ router.post('/signin', async (req, res) => {
     try {
         // Check if user exists
         const foundUser = await db.User.findOne({username:req.body.username})
-        console.log(foundUser)
         if (!foundUser) return (res.redirect('/register'))
         const match = await bcrypt.compare(req.body.password, foundUser.password)
         if(!match) return res.send("Wrong password")
@@ -60,7 +59,6 @@ router.post('/register', async (req, res, next) => {
 router.get("/signout", async (req, res) => {
     try {
         await req.session.destroy();
-        console.log(req.session);
         return res.redirect("/signin");
     } catch (error) {
         console.log(error);

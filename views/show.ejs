@@ -52,18 +52,21 @@
             <% } %>
         </div>
     </div>
+    <div class="column">
+        <h2>Similar Movies</h2>
         <div class="container">
-            <% if (movie.similarsId !== null) { %>
-                <% for(let i=0; i<movie.similarsId.length; i++){ %>
-                    <a href="/movies/s/<%=movie.similarsId[i]%>" class="index">
-                    <div class="column">
-                            <h3 class="movieTitle"><%=movie.similarsTitle[i]%></h3>
-                            <img class="index pic" src="<%=movie.similarsImage[i]%>" alt="<%=movie.similarsTitle[i]%>">
-                            <h2><%=movie.similarsImDbRating[i]%></h2>
-                        </div>
-                    </a>
+                <% if (movie.similarsId !== null) { %>
+                    <% for(let i=0; i<movie.similarsId.length; i++){ %>
+                        <a href="/movies/s/<%=movie.similarsId[i]%>" class="index">
+                        <div class="column">
+                                <h3 class="movieTitle"><%=movie.similarsTitle[i]%></h3>
+                                <img class="index pic" src="<%=movie.similarsImage[i]%>" alt="<%=movie.similarsTitle[i]%>">
+                                <h2><%=movie.similarsImDbRating[i]%></h2>
+                            </div>
+                        </a>
+                    <% } %>
                 <% } %>
-            <% } %>
+            </div>
         </div>
 
 </body>

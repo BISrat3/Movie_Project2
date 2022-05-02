@@ -54,6 +54,8 @@ Allows users to search movies using APIs.
 
 
 ## Models
+<img width="874" alt="Model post" src="https://user-images.githubusercontent.com/99110345/166170009-efd7d596-1b2a-43fa-a7b0-2f90286f0459.png">
+
 
 ## Stretch Goals
 - User movie list

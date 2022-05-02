@@ -1,16 +1,10 @@
 // import express
 const express = require('express')
-
 const mongoose = require('mongoose')
-
 const methodOverride = require('method-override')
-
 const controllers = require('./controllers')
-
 const session = require("express-session")
-
 const MongoStore = require("connect-mongo")
-
 const navLinks = require('./navLinks')
 
 // create instance
@@ -72,7 +66,6 @@ app.use('/', controllers.users)
 
 // "Home" route
 app.get('/', (req,res) => {
-    
     res.redirect('/movies')
 })
 

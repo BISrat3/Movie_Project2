@@ -28,7 +28,7 @@ app.use(express.urlencoded({ extended: false }))
 // Authentication middleware
 const authRequired = function (req, res, next) {
     if (req.session.currentUser) {
-      return next();
+      return next()
     }
     return res.redirect("/signin")
 }

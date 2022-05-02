@@ -24,16 +24,17 @@ header{
     padding: 0px;
 }
 
-/* ------ title pages------- */
-.movieTitle{
-    font-size: 20px;
-    color:whitesmoke;
+/* ------ search------- */
+#searchpage{
+    position: absolute;
+    
 }
 
 /* ------ search------- */
 .search {
-    position: absolute;
     right:50px;
+    margin-top: 35px;
+    max-width: 400px;
 }
 
 /* -------search engine input---- */
@@ -42,7 +43,7 @@ header{
     cursor:pointer;
     font-size:20px;
     padding:10px;
-    width :330px;
+    width :250px;
     border-right: none;
     height: 53px;
 }
@@ -55,12 +56,12 @@ header{
 .search .searchBtn {
     padding: 20px;
     background:white;
-    border: 5px solid blue;
+    border: 2px solid blue;
     cursor:pointer;
+    text-align: center;
+    max-width: 80px;
     border-radius: 40px;
-    position: relative;
-    margin-left: -5px;
-    font-size: 20px;
+    font-size: 15px;
     color:blue;
 }
 
@@ -106,7 +107,7 @@ nav p {
 }
 /* ----nav item --- */
 .nav-item {
-    font-size: 30px;
+    font-size: 25px;
     text-decoration: none;
     color:whitesmoke;
     padding: 10px;
@@ -122,6 +123,12 @@ nav a div {
     color: black;
 }
 
+/* ------ title pages------- */
+.movieTitle{
+    font-size: 20px;
+    color:whitesmoke;
+}
+
 /* ------- Register form-------- */
 .createMovie{
     margin-top: 80px;
@@ -133,7 +140,7 @@ nav a div {
     color:whitesmoke;
     position: absolute;
     left:50px;
-    margin-top: 20px;
+    margin-top: 60px;
 }
 
 /* -----edit Movie Page nav a tag----  */
@@ -148,8 +155,6 @@ nav a div {
     position: center;
     left:60px;
 }
-
-/* --------New Movie create Image------- */
 
 /* -------- Edit Movie title------- */
 .editMovie .titleMovie{
@@ -374,7 +379,6 @@ nav a div {
     text-decoration: none;
 }
 
-
 /* --------search movie div p tag------------*/
 .results-container .movie p{
     font-size: 30px;
@@ -427,7 +431,6 @@ nav a div {
     font-size: 25px;
     width: 300px;
 }
-
 
 /* ---------- Edit Review form input------*/
 .editReview .edit-review input{
@@ -503,7 +506,6 @@ nav a div {
 /* ----Index review reviewer name-- */
 .reviewIndex .reviewerName {
     font-size: 25px;
-
 }
 
 /* ----Index review page star icon-- */
@@ -512,32 +514,35 @@ nav a div {
    max-zoom: 30px;
 }
 
+/* ----Index review pagstar icon i-- */
 .reviewIndex .icon i{
    font-size: 20px;
  }
 
+ /* ----Index reviewComment-- */
 .reviewIndex .reviewComment{
     font-size: 20px;
 }
-/*-----   */
+/*----- row--------  */
 .row {
     display: flex;
     flex-direction: row;
 }
 
-
+/*----- column--------  */
 .column {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+/*----- container--------  */
 .container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 85px;
 }
-
 
 h2 {
     margin: 0 auto;
@@ -550,11 +555,6 @@ h3 {
 p {
     margin: 0 auto;
 }
-
-/* nav a{
-    text-align: center;
-    text-decoration: none;
-} */
 
 .show {
     color: white;

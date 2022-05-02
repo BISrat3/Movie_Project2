@@ -10,7 +10,6 @@
     <% for(let i=0; i<reviews.length; i++){ %>
         <% const review = reviews[i] %>
         <% if(user.username === review.user.username){ %>
-
             <strong class="reviewerName"> <%= review.user.username %> </strong>
             <!-- <small> <%# new Date(review.createdAt).toLocaleString() %> </small> -->
             <br />

@@ -551,6 +551,9 @@ nav a div {
     justify-content: center;
 }
 
+#buttons{
+    width: 50px;
+}
 h2 {
     margin: 0 auto;
 }

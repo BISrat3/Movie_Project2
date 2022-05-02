@@ -18,7 +18,7 @@ body {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-image: url('https://media0.giphy.com/media/cQhmYBg9qPaLYdqajA/giphy.gif?cid=790b7611b7be5e7b00dc148381ed1d73acf73692fdae5473&rid=giphy.gif&ct=g');
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
     background-attachment: fixed;
 }
 
@@ -497,16 +497,25 @@ nav a div {
     background-color:gold;
 }
 
+.reviewContainer{
+    width: 450px;
+}
+
+
 /* ------- Index review page------ */
 .reviewIndex {
-    margin-top: 100px;
-    max-width: 400px;
-    left:100px;
-    margin-left: 40px;
+    color: white;
+    background-color: black;
+    border: 10px solid black;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 10px;
+    width: 450px;
 }
 
 /* ----Index review page a tag------ */
 .reviewIndex a {
+    color: yellow;
     text-decoration: none;
     font-size: 20px;
 }
@@ -517,7 +526,7 @@ nav a div {
 }
 
 /* ----Index review page star icon-- */
-.reviewIndex .icon .fas{
+.reviewIndex .icon{
    color:yellow;
    max-zoom: 30px;
 }

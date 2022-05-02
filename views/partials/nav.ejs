@@ -1,19 +1,25 @@
 <nav>
-    <div class="search" id="searchPage">
-        <form method="POST" action="/movies/s">
-            <input type="text" name="search"  placeholder="Search" class="searchengine" id="searchShowNav">
-            <input type="submit" value="Search" class="searchBtn" id="shownav">
-        </form>
-    </div>
-    <div class="nav-menu">
-        <% if (typeof user !== 'undefined') { %>
-        <p class="nav-item">Welcome <%= user.username %>!</p>
-        <br />
-        <% } %>
+    <div class="nav-menu column">
         <!-- routes -->
-         <% if (typeof routes !== 'undefined') { %> <% routes.forEach((route) => { %>
-        <a class="nav-item" href="<%= route.href %>"> <%= route.title %> </a>
-        <% }) %> <% } %>
-        <br />
+        <div class="routes row">
+            <% if (typeof routes !== 'undefined') { %> <% routes.forEach((route) => { %>
+                <a class="nav-item" href="<%= route.href %>"><%= route.title %></a>
+                <% }) %> 
+            <% } %>
+        </div>
+        <div class="user-search row">
+            <% if (typeof user !== 'undefined') { %>
+                <p class="nav-item welcome">Welcome <%= user.username %>!</p>
+            <% } else { %>
+                <p class="nav-item welcome">Please Sign In</p>
+            <% } %>
+                <div class="searchbar">
+                    <form method="POST" action="/movies/s">
+                        <input type="text" name="search"  placeholder="Search" class="searchengine" id="searchShowNav">
+                        <input type="submit" value="Search" class="searchBtn" id="shownav">
+                    </form>
+                </div>
+
+        </div>
     </div>
 </nav>

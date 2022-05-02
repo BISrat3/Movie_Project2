@@ -14,7 +14,6 @@ body {
     flex-direction: column;
     background-color:  black;
     margin: 0 auto;
-    width: 0 auto;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-image: url('https://media0.giphy.com/media/cQhmYBg9qPaLYdqajA/giphy.gif?cid=790b7611b7be5e7b00dc148381ed1d73acf73692fdae5473&rid=giphy.gif&ct=g');
     background-repeat: no-repeat;
@@ -28,107 +27,124 @@ header{
     font-size: larger;
     color:yellow;
     text-shadow: 2px 2px black;
-    margin-top: 100px;
+    /* margin-top: 100px; */
     padding: 0px;
 }
 
-/* ------ search------- */
-#searchpage{
-    position: absolute;
-    
-}
-
-/* ------ search------- */
-.search {
-    right:50px;
-    margin-top: 35px;
-    max-width: 400px;
-}
-
 /* -------search engine input---- */
-.search .searchengine {
-    border: 1px solid grey;
+.searchengine {
+    align-self: center;
+    text-align: center;
+    border: 1px solid yellow;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
     cursor:pointer;
     font-size:20px;
-    padding:10px;
-    width :250px;
-    border-right: none;
-    height: 53px;
+    width: 100%;
+    height: 30px;
+}
+
+.searchBtn {
+    padding: 0 10px;
+    background:yellow;
+    border: 1px solid yellow;
+    cursor:pointer;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border-top-left-radius: 0 ;
+    border-bottom-left-radius: 0 ;
+    font-size: 20px;
+    color:black;
 }
 
 /* ----search hover---- */
-.search .searchBtn :hover{
-    background:lightcyan;
+.searchBtn:hover{
+    background:lightblue;
+    border-color: lightblue;
+    
 } 
-
-.search .searchBtn {
-    padding: 20px;
-    background:white;
-    border: 2px solid blue;
-    cursor:pointer;
-    text-align: center;
-    max-width: 80px;
-    border-radius: 40px;
-    font-size: 15px;
-    color:blue;
-}
-
-/* ------- search- for search ejs---- */
-.index-nav {
-    font-size: 40px;
-    text-decoration: none;
-    color:whitesmoke;
-    position: absolute;
-    left:50px;
-    margin-top: 30px;
-}
 
 /* ---- nav- bar---- */
 .nav-menu{
     font-size: 25px;
-    text-decoration: none;
-    position: absolute;
+    color: white;
+    width: 100%;
+    /* position: absolute;
     left:50px;
-    margin-bottom: 40px;
+    margin-bottom: 40px; */
+}
+
+nav {
+    display: flex;
+    width: 100%;
+}
+
+.routes {
+    justify-content: center;
+    width: 100%;
 }
 
 /* ---nav p tag------ */
 nav p {
     display: flex;
     flex-direction: row;
-    font-size: 20px;
-    height: 30px;
-    margin-top: 20px 20px 20px 30px;
+    margin: 0;
+    /* margin-top: 20px 20px 20px 30px; */
 }
 
 /* ----nav a tag---- */
-.nav-item a {
+.nav-item {
     display: flex;
     flex-direction: row;
-    font-size: 30px;
+    font-weight: bold;
+    /* font-size: 30px; */
+    color: whitesmoke;
     text-decoration: none;
 }
 
 /* ----nav a tag---- */
 .nav-menu .nav-item a {
-    margin: 10px 20px 20px 40px;
+    margin: 5px;
+    height: auto;
 }
 /* ----nav item --- */
 .nav-item {
-    font-size: 25px;
-    text-decoration: none;
+    font-size: 20px;
     color:whitesmoke;
-    padding: 10px;
+    padding: 5px;
 }
 
 /* ------nav a hover-------- */
 nav a:hover {
     font-weight: bold;
+    /* background-color: lightgrey; */
+    color: lightblue;
 }
 
-/* ------- nav div-------*/
-nav a div {
-    color: black;
+.user-search {
+    display: flex;
+    justify-content: right;
+    height: 100px;
+    width: 100%;
+}
+
+.welcome {
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.searchbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    width: 50%;
+}
+
+nav form {
+    display: flex;
 }
 
 /* ------ title pages------- */
@@ -391,13 +407,6 @@ a .createaccoutBtn{
 .results-container .movie p{
     font-size: 30px;
     color: blue;
-}
-
-/* ------------show nav------ */
-
-#searchPage{
-    position: absolute;
-    right:50px;
 }
 
 /* ------- edit review page------ */

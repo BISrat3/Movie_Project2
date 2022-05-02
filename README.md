@@ -72,10 +72,13 @@ Allows users to search movies using APIs.
 - Link Reviews to single User
 - User authentication needed for specific controller routes
 
+## Deployed Heroku App
+- https://floating-beyond-15434.herokuapp.com/movies
+
 ## Setup
 - link from heroku
 - Register to write/edit/delete reviews
 
-- Clone Repo
+- Fork and Clone Repo to your machine
 - Intitalize Repo (npm init)
 - Install dependencies (npm i)

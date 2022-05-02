@@ -1,5 +1,4 @@
 # Movie_App
-Reverse Engineering IMDb
 
 ## Description 
 Browser application that allows users to view movie details and leave reviews.

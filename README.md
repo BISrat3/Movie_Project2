@@ -55,7 +55,7 @@ Allows users to search movies using APIs.
 
 ## Models
 
-<img width="1034" alt="Screen Shot 2022-05-02 at 9 30 32 AM" src="https://user-images.githubusercontent.com/99110345/166242438-851f330a-4f1c-4466-973b-9c21b967974b.png">
+<img width="938" alt="models 1" src="https://user-images.githubusercontent.com/99110345/166248074-8ac80962-35b8-4165-85ea-aa0ca3651ea4.png">
 
 
 ## Stretch Goals

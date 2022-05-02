@@ -346,7 +346,7 @@ nav a div {
 }
 
 /* ---------- sign in create account------*/
-.signinForm a .createaccoutBtn{
+a .createaccoutBtn{
     font-size: 25px;
     width: 300px;
     border-radius: 10px;
@@ -526,13 +526,13 @@ nav a div {
 }
 
 /* ----Index review page star icon-- */
-.reviewIndex .icon{
+.icon{
    color:yellow;
    max-zoom: 30px;
 }
 
 /* ----Index review pagstar icon i-- */
-.reviewIndex .icon i{
+.icon i{
    font-size: 20px;
  }
 

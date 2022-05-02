@@ -1,23 +1,17 @@
 // import express
 const express = require('express')
-
 const mongoose = require('mongoose')
-
 const methodOverride = require('method-override')
-
 const controllers = require('./controllers')
-
 const session = require("express-session")
-
 const MongoStore = require("connect-mongo")
-
 const navLinks = require('./navLinks')
 
 // create instance
 const app = express()
 
 // Connection to MongoDB
-require('./config/db.connection');
+require('./config/db.connection')
 
 // app configs 
 app.set('view engine', 'ejs')
@@ -36,9 +30,8 @@ const authRequired = function (req, res, next) {
     if (req.session.currentUser) {
       return next();
     }
-  
-    return res.redirect("/signin");
-  };
+    return res.redirect("/signin")
+}
 
 // Application configuration
 app.use(
@@ -51,7 +44,7 @@ app.use(
             maxAge: 1000 * 60 * 60 * 24 * 7 * 2,
         },
     })
-);
+)
 
 // Nav Links Middleware
 app.use(navLinks)
@@ -72,7 +65,6 @@ app.use('/', controllers.users)
 
 // "Home" route
 app.get('/', (req,res) => {
-    
     res.redirect('/movies')
 })
 

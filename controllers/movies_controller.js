@@ -1,13 +1,11 @@
 // import express
 const express = require('express')
-
-const axios = require('axios');
-
+const axios = require('axios')
 const router = express.Router()
 
 // Models - databases
-const db = require('../models');
-const { populate } = require('../models/Movie');
+const db = require('../models')
+const { populate } = require('../models/Movie')
 
 // "Index" route
 router.get('/', async (req, res, next) =>{
@@ -16,7 +14,6 @@ router.get('/', async (req, res, next) =>{
         const context = { movies }
         res.render('index.ejs', context)
     } catch (error) {
-        console.log(error)
         req.error = error
         return next()
     }
@@ -38,8 +35,6 @@ router.post('/s', async (req, res, next) => {
     // Tells axios to go to this url, and add the query options
     axios.get('http://www.omdbapi.com', queryOptions)
         .then(function (response) {
-            // res.send(response.data)          // Prints out database in browser
-            // res.send(response.data.Search[0])   // Prints out first data obj in browser
             let context = {
                 movieData: response.data
             }
@@ -59,6 +54,7 @@ router.get('/s/:imdbId', async (req, res, next) => {
         })
 })
 
+//"show" route by Id
 router.get('/:id', async (req, res, next) => {
     try {
         const foundMovie = await db.Movie.findById(req.params.id)
@@ -70,7 +66,6 @@ router.get('/:id', async (req, res, next) => {
         }
         res.render('show.ejs', context)
     } catch (error) {
-        console.log(error);
         req.error = error;
         return next();
     }
@@ -82,7 +77,6 @@ router.post('/', async (req, res, next) => {
         const createMovie = await db.Movie.create(req.body)
         res.redirect('/movies')
     } catch (error) {
-        console.log(error);
         req.error = error;
         return next();
     }
@@ -94,7 +88,6 @@ router.get('/:id/edit', async (req, res, next) => {
         const updateMovie = await db.Movie.findById(req.params.id)
         return res.render('edit.ejs', {movie: updateMovie})
     } catch (error){
-        console.log(error)
         req.error =error
         return next()
     }
@@ -118,10 +111,10 @@ router.put('/:id', async (req, res, next) => {
         const updatedMovie = await db.Movie.findByIdAndUpdate(req.params.id, req.body);
         return res.redirect('/movies');
     } catch (error) {
-        console.log(error);
         req.error = error;
         return next();
     }
 });
 
+// export router
 module.exports = router 

@@ -18,7 +18,8 @@ Allows users to search movies using APIs.
 
 ## Wireframes
 
-<img width="854" alt="Screen Shot 2022-05-01 at 7 41 20 PM" src="https://user-images.githubusercontent.com/99110345/166169379-0141f2e4-e78e-4d30-aeca-07d6f4b119fc.png">
+<img width="705" alt="Screen Shot 2022-05-02 at 4 08 51 PM" src="https://user-images.githubusercontent.com/99110345/166318309-50468d33-474a-4899-b339-33af6bb6a450.png">
+
 
 
 ## Models

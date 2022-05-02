@@ -149,7 +149,9 @@ nav form {
 
 /* ------ title pages------- */
 .movieTitle{
+    text-align: center;
     font-size: 20px;
+    height: 60px;
     color:whitesmoke;
 }
 

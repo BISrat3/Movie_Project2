@@ -560,9 +560,16 @@ nav a div {
     justify-content: center;
 }
 
-#buttons{
-    width: 50px;
+#buttons {
+    width: 300px;
+    font-size: 20px;
+    border-radius: 20px;
+    border: 2px solid green;
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
 }
+
 h2 {
     margin: 0 auto;
 }

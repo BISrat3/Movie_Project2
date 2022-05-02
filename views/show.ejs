@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('partials/head.ejs') %>
+    <%- include('partials/head.ejs', {pageName: movie.title}) %>
 <body>
-    <%- include('partials/nav.ejs') %>
+    <%- include('partials/nav.ejs', {pageName: movie.title}) %>
     <header>
         <h1><%=movie.title%></h1>
     </header>

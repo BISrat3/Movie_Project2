@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('partials/head.ejs') %>
+    <%- include('partials/head.ejs', {pageName: imdbData.title}) %>
 <body>
-    <%- include('partials/nav.ejs') %>
+    <%- include('partials/nav.ejs', {pageName: imdbData.title}) %>
     <header>
         <h1><%=imdbData.title%></h1>
     </header>

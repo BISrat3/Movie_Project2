@@ -90,7 +90,6 @@ nav p {
     display: flex;
     flex-direction: row;
     margin: 0;
-    /* margin-top: 20px 20px 20px 30px; */
 }
 
 /* ----nav a tag---- */
@@ -98,7 +97,6 @@ nav p {
     display: flex;
     flex-direction: row;
     font-weight: bold;
-    /* font-size: 30px; */
     color: whitesmoke;
     text-decoration: none;
 }
@@ -118,7 +116,6 @@ nav p {
 /* ------nav a hover-------- */
 nav a:hover {
     font-weight: bold;
-    /* background-color: lightgrey; */
     color: lightblue;
 }
 
@@ -157,6 +154,7 @@ nav form {
 .createMovie{
     margin-top: 80px;
 }
+
 /* -----edit Movie Page nav----  */
 .nav-editMovie{
     font-size: 20px;
@@ -582,6 +580,7 @@ a .createaccoutBtn{
     justify-content: center;
 }
 
+/* ------ buttons-------- */
 #buttons {
     width: 300px;
     font-size: 20px;
@@ -592,18 +591,28 @@ a .createaccoutBtn{
     justify-content: center;
 }
 
+/* ----- h2 tags---------- */
 h2 {
     margin: 0 auto;
 }
 
+/* ----- h3 tags---------- */
 h3 {
     margin: 0 auto;
 }
 
+/* ----- p tags---------- */
 p {
     margin: 0 auto;
 }
 
+/* ----- p or class---------- */
+.or{
+    font-size: 20px;
+    color: aliceblue;
+}
+
+/* ----- show class---------- */
 .show {
     color: white;
     width: 400px;
@@ -613,12 +622,14 @@ p {
     margin: 10px;
 }
 
+/* ----- pic class---------- */
 .pic {
     width: 400px;
     height: 500px;
     object-fit: contain;
 }
 
+/* ----- index class---------- */
 .index {
     width: 200px;
     color: white;
@@ -630,18 +641,21 @@ p {
     margin: 10px;
 }
 
+/* ----- index and pic class---------- */
 .index.pic {
     width: 200px;
     height: 300px;
     background-color: black;
 }
 
+/* ----- pic small class---------- */
 .pic-small {
     width: 100px;
     height: 200px;
     object-fit: contain;
 }
 
+/* ----- similars class---------- */
 .similars {
     text-align: center;
     font-size: 20px;
@@ -649,6 +663,7 @@ p {
     text-shadow: 2px 2px black;
 }
 
+/* ----- hidden class---------- */
 .hidden {
     display: none;
 }

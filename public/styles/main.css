@@ -4,15 +4,22 @@
     box-sizing: border-box;
 }
 
+html {
+    height: 100%;
+}
+
 /* ------ body style--------- */
 body {
     display: flex;
     flex-direction: column;
-    background-color:  grey;
+    background-color:  black;
     margin: 0 auto;
     width: 0 auto;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-image: url('https://media3.giphy.com/media/l2v1YQMVH8rEAstMyK/giphy.gif?cid=ecf05e47hrmpybzzlbla5jf1cwcaahh6m7goz1dz2k21a3km&rid=giphy.gif&ct=g');
+    background-image: url('https://media0.giphy.com/media/cQhmYBg9qPaLYdqajA/giphy.gif?cid=790b7611b7be5e7b00dc148381ed1d73acf73692fdae5473&rid=giphy.gif&ct=g');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
 }
 
 /* ----- header tag------- */
@@ -20,6 +27,7 @@ header{
     text-align: center;
     font-size: larger;
     color:yellow;
+    text-shadow: 2px 2px black;
     margin-top: 100px;
     padding: 0px;
 }
@@ -115,7 +123,7 @@ nav p {
 
 /* ------nav a hover-------- */
 nav a:hover {
-    background-color:black;
+    font-weight: bold;
 }
 
 /* ------- nav div-------*/
@@ -592,6 +600,13 @@ p {
     width: 100px;
     height: 200px;
     object-fit: contain;
+}
+
+.similars {
+    text-align: center;
+    font-size: 20px;
+    color: yellow;
+    text-shadow: 2px 2px black;
 }
 
 .hidden {

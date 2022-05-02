@@ -71,8 +71,10 @@ app.use('/reviews', authRequired, controllers.reviews)
 app.use('/', controllers.users)
 
 // "Home" route
-app.get('/', (req,res) =>
-    res.send("Welcome to Movie Page"))
+app.get('/', (req,res) => {
+    
+    res.redirect('/movies')
+})
 
 app.listen(process.env.PORT, ()=>
     console.log(`Listening on port: ${process.env.PORT}`))

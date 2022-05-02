@@ -6,41 +6,38 @@
     <header>
         <h1>Review Index Page</h1>
     </header>
-    <div class="reviewIndex">
-    <% for(let i=0; i<reviews.length; i++){ %>
-        <% const review = reviews[i] %>
-        <% if(user.username === review.user.username){ %>
-            <strong class="reviewerName"> <%= review.user.username %> </strong>
-            <!-- <small> <%# new Date(review.createdAt).toLocaleString() %> </small> -->
-            <br />
-            <!-- create our stars -->
-            <% for( let index = 0; index < 5; index++ ) { %> 
-            <% if (review.rating > index) { %>
-            <span class="icon">
-                <i class="fas fa-star yellow">*</i>
-            </span>
-            <% } else { %>
-                <span class="icon">
-                    <i class="fas fa-star">-</i>
-                </span>
-            <% } %> <% } %>
-                <br />
-                <div class="reviewComment">
-                    <%= review.comment %>
+    <div class="reviewContainer column">
+        <% for(let i=0; i<reviews.length; i++){ %>
+            <% const review = reviews[i] %>
+            <% if(user.username === review.user.username){ %>
+                <div class="reviewIndex">
+                    <strong class="reviewerName"> <%= review.user.username %> </strong>
+                    <small> <%= new Date(review.createdAt).toLocaleString() %> </small>
+                    <br>
+                    <a href="/movies/<%= review.movie._id %>" class="movieLink"><%= review.movie.title %></a>
+                    <br>
+                    <% for( let index = 0; index < 5; index++ ) { %> 
+                        <% if (review.rating > index) { %>
+                        <span class="icon">
+                            <i class="star">*</i>
+                        </span>
+                        <% } else { %>
+                            <span class="icon">
+                                <i class="non-star">-</i>
+                            </span>
+                        <% } %>
+                    <% } %>
+                        <div class="reviewComment">
+                            <%= review.comment %>
+                        </div>
+                        <div class="row">
+                            <a href="/reviews/<%=reviews[i]._id%>/edit"><button class="editBtn">Edit Review</button></a>
+                            <form method="POST" action="/reviews/<%= review._id %>?_method=DELETE">
+                                <input type="hidden" name="movieId" value="<%=review.movie._id%>">
+                                <input type="submit" value="Delete Review" class="deleteBtn">
+                            </form>
+                        </div>                 
                 </div>
-                <br />
-                <a href="/movies/<%= review.movie._id %>"><%= review.movie.title %></a>
-                <br />
-                <div class="row">
-                    <br />
-                    <a href="/reviews/<%=reviews[i]._id%>/edit"><button class="editBtn">Edit Review</button></a>
-                    <form method="POST" action="/reviews/<%= review._id %>?_method=DELETE">
-                        <input type="hidden" name="movieId" value="<%=review.movie._id%>">
-                        <input type="submit" value="Delete Review" class="deleteBtn">
-                    </form>
-                    <br />
-                </div>
-                <br />                      
             <% } %> 
         <% } %>
     </div>

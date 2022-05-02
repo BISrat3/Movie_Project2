@@ -11,7 +11,7 @@ const navLinks = require('./navLinks')
 const app = express()
 
 // Connection to MongoDB
-require('./config/db.connection');
+require('./config/db.connection')
 
 // app configs 
 app.set('view engine', 'ejs')
@@ -30,9 +30,8 @@ const authRequired = function (req, res, next) {
     if (req.session.currentUser) {
       return next();
     }
-  
-    return res.redirect("/signin");
-  };
+    return res.redirect("/signin")
+}
 
 // Application configuration
 app.use(
@@ -45,7 +44,7 @@ app.use(
             maxAge: 1000 * 60 * 60 * 24 * 7 * 2,
         },
     })
-);
+)
 
 // Nav Links Middleware
 app.use(navLinks)

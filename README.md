@@ -25,7 +25,6 @@ Allows users to search movies using APIs.
 
 <img width="938" alt="models 1" src="https://user-images.githubusercontent.com/99110345/166248074-8ac80962-35b8-4165-85ea-aa0ca3651ea4.png">
 
-
 ## User Stories
 - As a user, I want to see all the movies in the database.
 - As a user, I want to select a movie & see all its details.

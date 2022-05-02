@@ -1,5 +1,7 @@
-# Movie_Project2
+# Movie_App
 Reverse Engineering IMDb
+
+## Description 
 Browser application that allows users to view movie details and leave reviews.
 Allows users to search movies using APIs.
 
@@ -10,8 +12,19 @@ Allows users to search movies using APIs.
 - Express
 - EJS
 - Mongoose
+- MongoDB
 - Axios
 - Bcryptjs
+
+## Wireframes
+
+<img width="854" alt="Screen Shot 2022-05-01 at 7 41 20 PM" src="https://user-images.githubusercontent.com/99110345/166169379-0141f2e4-e78e-4d30-aeca-07d6f4b119fc.png">
+
+
+## Models
+
+<img width="938" alt="models 1" src="https://user-images.githubusercontent.com/99110345/166248074-8ac80962-35b8-4165-85ea-aa0ca3651ea4.png">
+
 
 ## User Stories
 - As a user, I want to see all the movies in the database.
@@ -46,17 +59,6 @@ Allows users to search movies using APIs.
 - Store user objects into MongoDB
 - SignIn page (allow user to sign in using existing data in database)
 - User session object
-
-## Wireframes
-
-<img width="854" alt="Screen Shot 2022-05-01 at 7 41 20 PM" src="https://user-images.githubusercontent.com/99110345/166169379-0141f2e4-e78e-4d30-aeca-07d6f4b119fc.png">
-
-
-
-## Models
-
-<img width="938" alt="models 1" src="https://user-images.githubusercontent.com/99110345/166248074-8ac80962-35b8-4165-85ea-aa0ca3651ea4.png">
-
 
 ## Stretch Goals
 - User movie list

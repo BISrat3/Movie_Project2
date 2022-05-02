@@ -544,6 +544,9 @@ nav a div {
     margin-top: 85px;
 }
 
+#buttons{
+    width: 50px;
+}
 h2 {
     margin: 0 auto;
 }

@@ -14,7 +14,6 @@ router.get('/', async (req, res, next) =>{
         const context = { movies }
         res.render('index.ejs', context)
     } catch (error) {
-        console.log(error)
         req.error = error
         return next()
     }
@@ -36,8 +35,6 @@ router.post('/s', async (req, res, next) => {
     // Tells axios to go to this url, and add the query options
     axios.get('http://www.omdbapi.com', queryOptions)
         .then(function (response) {
-            // res.send(response.data)          // Prints out database in browser
-            // res.send(response.data.Search[0])   // Prints out first data obj in browser
             let context = {
                 movieData: response.data
             }
@@ -69,7 +66,6 @@ router.get('/:id', async (req, res, next) => {
         }
         res.render('show.ejs', context)
     } catch (error) {
-        console.log(error);
         req.error = error;
         return next();
     }
@@ -81,7 +77,6 @@ router.post('/', async (req, res, next) => {
         const createMovie = await db.Movie.create(req.body)
         res.redirect('/movies')
     } catch (error) {
-        console.log(error);
         req.error = error;
         return next();
     }
@@ -116,7 +111,6 @@ router.put('/:id', async (req, res, next) => {
         const updatedMovie = await db.Movie.findByIdAndUpdate(req.params.id, req.body);
         return res.redirect('/movies');
     } catch (error) {
-        console.log(error);
         req.error = error;
         return next();
     }

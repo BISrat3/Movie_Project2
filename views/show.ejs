@@ -37,9 +37,21 @@
             <% for(let i=0; i<reviews.length; i++) { %>
                 <% if( reviews[i].movie._id.equals(movie._id) ){ %>
                 <div class="show column">
-                        <h3>Rating: <%=reviews[i].rating%></h3>
+                    <div class="row">
+                        <strong class="reviewerName"><%=reviews[i].user.username%>: </strong>
+                        <% for( let index = 0; index < 5; index++ ) { %> 
+                            <% if (reviews[i].rating > index) { %>
+                            <span class="icon">
+                                <i class="star">*</i>
+                            </span>
+                            <% } else { %>
+                                <span class="icon">
+                                    <i class="non-star">-</i>
+                                </span>
+                            <% } %>
+                        <% } %>
+                    </div>
                         <p><%=reviews[i].comment%></p>
-                        <p>by: <%=reviews[i].user.username%></p>
                     <div class="row hidden">
                         <a href="/reviews/<%=reviews[i]._id%>/edit"><button class="editBtn">Edit Review</button></a>
                         <form method="POST" action="/reviews/<%= reviews[i]._id %>?_method=DELETE">

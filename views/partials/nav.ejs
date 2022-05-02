@@ -11,14 +11,18 @@
             <% if (typeof user !== 'undefined') { %>
                 <p class="nav-item welcome">Welcome <%= user.username %>!</p>
             <% } else { %>
-                <p class="nav-item welcome">Please Sign In</p>
+                <p class="nav-item welcome"></p>
             <% } %>
+            <% if(pageName !== "Sign In" ) { %>
+                <% if(pageName !== "Register" ) { %>
                 <div class="searchbar">
                     <form method="POST" action="/movies/s">
                         <input type="text" name="search"  placeholder="Search" class="searchengine" id="searchShowNav">
                         <input type="submit" value="Search" class="searchBtn" id="shownav">
                     </form>
                 </div>
+                <% } %>
+            <% } %>
 
         </div>
     </div>

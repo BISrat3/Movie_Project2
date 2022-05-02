@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <%- include ('partials/head.ejs', { pageTitle: "edit movies"})%>
+   <%- include ('partials/head.ejs', {pageTitle: 'Edit Movie'}) %>
 </head>
 <body>
-    <nav class="nav-editMovie">
-        <a href="/movies">Back to Home Page</a>
-    </nav>
+    <%- include('../partials/nav.ejs', {pageName: 'Edit Movie'}) %>
     <header>
         <h1>Edit Movie Page | <%= movie.title %> </h1>
     </header>

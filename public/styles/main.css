@@ -540,6 +540,20 @@ a .createaccoutBtn{
 .reviewIndex .reviewComment{
     font-size: 20px;
 }
+
+/* ------some buttons style----- */
+.someButtons{
+    font-size:18px;
+    border: 5px solid green;
+    border-radius: 10px;
+}
+
+.editBtn{
+    font-size:18px;
+    border: 5px solid green;
+    border-radius: 10px;
+}
+
 /*----- row--------  */
 .row {
     display: flex;

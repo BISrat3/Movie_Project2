@@ -14,16 +14,17 @@
         <div class="show column">
             <h3><%=imdbData.tagline%></h3>
             <p><%=imdbData.genres%></p>
+            <br>
             <p><%=imdbData.plot%></p>
             <br>
-            <p><%=imdbData.directors%></p>
-            <p><%=imdbData.writers%></p>
-            <p><%=imdbData.stars%></p>
-            <p><%=imdbData.releaseDate%></p>
-            <p><%=imdbData.companies%></p>
-            <p><%=imdbData.awards%></p>
-            <p><%=imdbData.imDbRating%></p>
-            <p><%=imdbData.metacriticRating%></p>
+            <p class="detail"><span class="detailKey">Directors:</span> <%=imdbData.directors%></p>
+            <p class="detail"><span class="detailKey">Writers:</span> <%=imdbData.writers%></p>
+            <p class="detail"><span class="detailKey">Stars:</span> <%=imdbData.stars%></p>
+            <p class="detail"><span class="detailKey">Release Date:</span> <%=imdbData.releaseDate%></p>
+            <p class="detail"><span class="detailKey">Companies:</span> <%=imdbData.companies%></p>
+            <p class="detail"><span class="detailKey">Awards:</span> <%=imdbData.awards%></p>
+            <p class="detail"><span class="detailKey">IMDB Rating:</span> <%=imdbData.imDbRating%></p>
+            <p class="detail"><span class="detailKey">Metacritic Rating:</span> <%=imdbData.metacriticRating%></p>
         </div>
     </div>
     <form method="POST" action="/movies">

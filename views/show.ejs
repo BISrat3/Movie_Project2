@@ -14,16 +14,17 @@
         <div class="show column">
             <h3><%=movie.tagline%></h3>
             <p><%=movie.genres%></p>
-            <p><%=movie.plot%></p>
             <br>
-            <p><%=movie.directors%></p>
-            <p><%=movie.writers%></p>
-            <p><%=movie.stars%></p>
-            <p><%=movie.releaseDate.toLocaleDateString()%></p>
-            <p><%=movie.companies%></p>
-            <p><%=movie.awards%></p>
-            <p><%=movie.imDbRating%></p>
-            <p><%=movie.metacriticRating%></p>
+            <p class="detail"><%=movie.plot%></p>
+            <br>
+            <p class="detail"><span class="detailKey">Directors:</span> <%=movie.directors%></p>
+            <p class="detail"><span class="detailKey">Writers:</span> <%=movie.writers%></p>
+            <p class="detail"><span class="detailKey">Stars:</span> <%=movie.stars%></p>
+            <p class="detail"><span class="detailKey">Release Date:</span> <%=movie.releaseDate.toLocaleDateString()%></p>
+            <p class="detail"><span class="detailKey">Companies:</span> <%=movie.companies%></p>
+            <p class="detail"><span class="detailKey">Awards:</span> <%=movie.awards%></p>
+            <p class="detail"><span class="detailKey">IMDB Rating:</span> <%=movie.imDbRating%></p>
+            <p class="detail"><span class="detailKey">Metacritic Rating:</span> <%=movie.metacriticRating%></p>
             <div class="row hidden">
                 <form method="POST" action="/movies/<%= movie._id %>?_method=DELETE">
                     <input type="submit" value="Delete Movie" class="deleteBtn">

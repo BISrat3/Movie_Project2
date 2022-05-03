@@ -1,7 +1,7 @@
 # Movie App
 
 ## Description 
-Browser application that allows users to search and view movie details.
+Browser application inspired by [imdb](https://www.imdb.com/). Allows users to search and view movie details.
 Allows users to search movies using API databases ([imdb-api](https://imdb-api.com/), [omdb-api](http://www.omdbapi.com/)). 
 Allows users to rate and leave reviews to selected movies.
 

@@ -10,7 +10,7 @@ const { populate } = require('../models/Movie')
 // "Index" route
 router.get('/', async (req, res, next) =>{
     try {
-        const movies = await db.Movie.find({})
+        const movies = await db.Movie.find({}).select('_id title image')
         const context = { movies }
         res.render('index.ejs', context)
     } catch (error) {

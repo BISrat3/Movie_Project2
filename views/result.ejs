@@ -9,25 +9,26 @@
     <br>
     <p class="similars"><%=imdbData.year%> | <%=imdbData.contentRating%> | <%=imdbData.runtimeStr%></p>
     <br>
-    <div class="container">
-        <img class="show pic" src="<%=imdbData.image%>" alt="">
-        <div class="show column">
-            <h3><%=imdbData.tagline%></h3>
-            <p><%=imdbData.genres%></p>
-            <br>
-            <p><%=imdbData.plot%></p>
-            <br>
-            <p class="detail"><span class="detailKey">Directors:</span> <%=imdbData.directors%></p>
-            <p class="detail"><span class="detailKey">Writers:</span> <%=imdbData.writers%></p>
-            <p class="detail"><span class="detailKey">Stars:</span> <%=imdbData.stars%></p>
-            <p class="detail"><span class="detailKey">Release Date:</span> <%=imdbData.releaseDate%></p>
-            <p class="detail"><span class="detailKey">Companies:</span> <%=imdbData.companies%></p>
-            <p class="detail"><span class="detailKey">Awards:</span> <%=imdbData.awards%></p>
-            <p class="detail"><span class="detailKey">IMDB Rating:</span> <%=imdbData.imDbRating%></p>
-            <p class="detail"><span class="detailKey">Metacritic Rating:</span> <%=imdbData.metacriticRating%></p>
-        </div>
-    </div>
     <form method="POST" action="/movies">
+        <div class="container">
+            <img class="show pic" src="<%=imdbData.image%>" alt="">
+            <div class="show column">
+                <h3><%=imdbData.tagline%></h3>
+                <p><%=imdbData.genres%></p>
+                <br>
+                <p><%=imdbData.plot%></p>
+                <br>
+                <p class="detail"><span class="detailKey">Directors:</span> <%=imdbData.directors%></p>
+                <p class="detail"><span class="detailKey">Writers:</span> <%=imdbData.writers%></p>
+                <p class="detail"><span class="detailKey">Stars:</span> <%=imdbData.stars%></p>
+                <p class="detail"><span class="detailKey">Release Date:</span> <%=imdbData.releaseDate%></p>
+                <p class="detail"><span class="detailKey">Companies:</span> <%=imdbData.companies%></p>
+                <p class="detail"><span class="detailKey">Awards:</span> <%=imdbData.awards%></p>
+                <p class="detail"><span class="detailKey">IMDB Rating:</span> <%=imdbData.imDbRating%></p>
+                <p class="detail"><span class="detailKey">Metacritic Rating:</span> <%=imdbData.metacriticRating%></p>
+                <input type="submit" value="Add Movies To The List" id="buttons">
+            </div>
+        </div>
         <div class="hidden">
             <input type="text" name="title" value="<%=imdbData.title%>">
             <input type="text" name="image" value="<%=imdbData.image%>">
@@ -65,7 +66,7 @@
                     </div>
             <% } %>
         </div>
-        <input type="submit" value="Add Movies To The List" id="buttons">
+        
     </form>
 </body>
 </html>

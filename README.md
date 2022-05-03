@@ -9,7 +9,7 @@ Allows users to rate and leave reviews to selected movies.
 HTML | CSS | JavaScript | Express | EJS | Mongoose | MongoDB | Axios | Bcryptjs | [imdb-api](https://imdb-api.com/) | [omdb-api](http://www.omdbapi.com/)
 
 ## Wireframes
-<img width="705" alt="Screen Shot 2022-05-02 at 4 08 51 PM" src="https://user-images.githubusercontent.com/99110345/166318309-50468d33-474a-4899-b339-33af6bb6a450.png">
+<img width="938" alt="Screen Shot 2022-05-02 at 4 08 51 PM" src="https://user-images.githubusercontent.com/99110345/166318309-50468d33-474a-4899-b339-33af6bb6a450.png">
 
 ## Models
 <img width="938" alt="models 1" src="https://user-images.githubusercontent.com/99110345/166248074-8ac80962-35b8-4165-85ea-aa0ca3651ea4.png">

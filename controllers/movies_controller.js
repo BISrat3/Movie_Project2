@@ -43,7 +43,7 @@ router.post('/s', async (req, res, next) => {
 })
 
 // Imdb Show route
-router.get('/s/:imdbId', async (req, res, next) => {
+router.get('/s/:imdbId', async (req, res) => {
     // Tells axios to go to this url
     axios.get(`http://www.imdb-api.com/en/API/Title/${process.env.imdbKEY}/${req.params.imdbId}`)
         .then(function (response) {

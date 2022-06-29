@@ -18,8 +18,8 @@ router.post('/signin', async (req, res) => {
         const foundUser = await db.User.findOne({username:req.body.username})
         if (!foundUser) return (res.redirect('/register'))
         const match = await bcrypt.compare(req.body.password, foundUser.password)
-        if(!match) return res.redirect('/wrong')
-        
+        if(!match) 
+        return res.redirect('/wrong')
         req.session.currentUser ={
             id: foundUser._id,
             username: foundUser.username,
@@ -30,6 +30,7 @@ router.post('/signin', async (req, res) => {
     }
 })
 
+// wrong password page
 router.get('/wrong', (req,res) =>{
     res.render('users/wrong.ejs')
 })

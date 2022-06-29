@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head.ejs', {pageName: 'Sign In'}) %>
+<body>
+    <%- include('../partials/nav.ejs', {pageName: 'Sign In'}) %>
+    <header>
+        <h1>Wrong password</h1>
+    </header>
+    <form action="/signin" method="POST" class="signinForm">
+        <div>
+            <button type="submit" class="submitSignin">Sign in</button>
+        </div>
+    </form>
+</body>
+</html>
